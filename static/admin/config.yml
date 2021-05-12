@@ -78,11 +78,14 @@ collections:
   #       }
   - name: 'gallery'
     label: 'Gallery'
+    preview_path: 'gallery/{{slug}}'
+    create: true
     fields: 
       - {
           label: 'Gallery',
           name: 'gallery',
           widget: 'list',
+          folder: 'content/gallery'
           required: false,
           field: { label: 'Image', name: 'image', widget: 'image' },
         }
