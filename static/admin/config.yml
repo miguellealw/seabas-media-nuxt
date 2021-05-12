@@ -80,8 +80,8 @@ collections:
     label: 'Gallery'
     fields: 
       - {
-          label: 'Gallery'
-          name 'gallery',
+          label: 'Gallery',
+          name: 'gallery',
           widget: 'list',
           required: false,
           field: { label: 'Image', name: 'image', widget: 'image' },
