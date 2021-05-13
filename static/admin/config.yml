@@ -78,11 +78,12 @@ collections:
   #       }
   - label: 'Gallery'
     name: 'gallery'
+    slug: { { slug } }
     preview_path: 'gallery/{{slug}}'
     create: true
     folder: 'content/gallery'
     # media_folder will contain the images uploaded through the CMS
-    media_folder: 'static/images/uploads'
+    # media_folder: 'static/images/uploads'
     required: false
     fields:
       - { label: 'Gallery Title', name: 'title', widget: 'string' }
