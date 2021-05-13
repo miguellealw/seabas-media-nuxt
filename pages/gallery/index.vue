@@ -39,9 +39,9 @@
       <h1 class="title">Image Gallery</h1>
 
       <ul>
-        <li class="m-4 p-4 bg-gray-300" v-for="(gallery, index) in galleries" :key="index">
+        <li class="m-4 p-4 bg-gray-300 md:grid-cols-3" v-for="(gallery, index) in galleries" :key="index">
           <h2>{{ gallery.title }}</h2>
-          <div v-if="gallery.images" class="nuxt-content">
+          <div v-if="gallery.images" class="nuxt-content grid grid-cols-3 gap-3">
             <img v-for="image in gallery.images" class="image" :key="image.id" :src="image" />
           </div>
         </li>
