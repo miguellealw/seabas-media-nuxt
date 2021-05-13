@@ -1,6 +1,7 @@
 ---
 title: Urban
 gallery:
-  - https://placekitten.com/600/600
   - /img/top-sort.png
+  - /img/slides_graph.png
+  - /img/eol_mac_unix_windows.png
 ---
