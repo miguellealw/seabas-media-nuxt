@@ -38,14 +38,8 @@
       </nav>
       <h1 class="title">Image Gallery</h1>
 
-      <!-- <h1>{{ gallery.title }}</h1>
-      <div v-if="gallery.images" class="nuxt-content">
-        <img v-for="image in gallery.images" class="image" :key="image.id" :src="image" />
-      </div> -->
-
       <ul>
         <li class="m-4 p-4 bg-gray-300" v-for="(gallery, index) in galleries" :key="index">
-          <!-- <nuxt-link class="card card--clickable" :to="`gallery/${gallery.slug}`">{{ gallery.title }}</nuxt-link> -->
           <h2>{{ gallery.title }}</h2>
           <div v-if="gallery.images" class="nuxt-content">
             <img v-for="image in gallery.images" class="image" :key="image.id" :src="image" />
