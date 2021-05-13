@@ -85,6 +85,7 @@ collections:
     media_folder: 'static/images/uploads'
     required: false
     fields:
+      - { lable: 'Gallery Title', name: 'title', widget: 'string' }
       - {
           label: 'Gallery',
           name: 'gallery',
