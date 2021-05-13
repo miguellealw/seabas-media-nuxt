@@ -80,10 +80,10 @@ collections:
     name: 'gallery'
     preview_path: 'gallery/{{slug}}'
     create: true
-    folder: 'content/gallery',
+    folder: 'content/gallery'
     # media_folder will contain the images uploaded through the CMS
-    media_folder: 'static/images/uploads',
-    required: false,
+    media_folder: 'static/images/uploads'
+    required: false
     fields:
       - {
           label: 'Gallery',
