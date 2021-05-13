@@ -76,7 +76,8 @@ collections:
   #         summary: '{{fields.image}}',
   #         field: { label: 'Image', name: 'image', widget: 'image' },
   #       }
-  - label: 'Gallery'
+  - label: 'Gallery Images'
+    label_singular: 'Gallery Image'
     name: 'gallery'
     slug: '{{ slug }}'
     preview_path: 'gallery/{{slug}}'
