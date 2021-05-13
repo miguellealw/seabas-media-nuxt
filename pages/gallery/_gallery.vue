@@ -6,8 +6,8 @@
       </nav>
 
       <h1>{{ gallery.title }}</h1>
-      <div v-if="gallery.gallery" class="nuxt-content">
-        <img v-for="image in gallery.gallery" class="image" :key="image.id" :src="image" />
+      <div v-if="gallery.images" class="nuxt-content">
+        <img v-for="image in gallery.images" class="image" :key="image.id" :src="image" />
       </div>
 
       <!-- <article>
