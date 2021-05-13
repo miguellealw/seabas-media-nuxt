@@ -5,6 +5,11 @@
         <router-back class="block" />
       </nav>
 
+      <h1>{{ gallery.title }}</h1>
+      <div v-if="gallery.gallery" class="nuxt-content">
+        <img v-for="image in gallery.gallery" class="image" :key="image.id" :src="image" />
+      </div>
+
       <!-- <article>
         <img v-if="post.cover" class="cover-image" :src="post.cover" />
         <h1 class="">{{ post.title }}</h1>
