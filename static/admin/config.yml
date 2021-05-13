@@ -80,9 +80,12 @@ collections:
     label: 'Gallery'
     preview_path: 'gallery/{{slug}}'
     create: true
-    folder: 'content/gallery'
+    folder: 'content/gallery',
+    identifier_field: 'GALLERY',
+    # media_folder will contain the images uploaded through the CMS
+    media_folder: 'static/images/uploads',
     required: false,
-    fields: 
+    fields:
       - {
           label: 'Gallery',
           name: 'gallery',
