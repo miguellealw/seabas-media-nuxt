@@ -4,8 +4,8 @@
     <section v-if="galleries" class="w-full max-w-5xl mx-auto">
       <h1 class="title">Image Gallery</h1>
       <ul>
-        <li v-for="(gallery, index) in galleries" :key="index">
-          <nuxt-link :to="`${gallery}/${gallery.slug}`">{{ gallery.title }}</nuxt-link>
+        <li class="m-4 p-4 bg-gray-300" v-for="(gallery, index) in galleries" :key="index">
+          <nuxt-link :to="`gallery/${gallery.slug}`">{{ gallery.title }}</nuxt-link>
         </li>
       </ul>
       <!-- <div v-if="gallery.gallery" class="nuxt-content">
@@ -26,7 +26,6 @@ export default {
     } catch (e) {
       error({ message: 'Gallery not found' })
     }
-    console.log('GALLERIES', galleries)
     return { galleries }
   },
 }

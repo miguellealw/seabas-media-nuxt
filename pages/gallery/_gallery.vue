@@ -32,6 +32,7 @@ export default {
     } catch (e) {
       error({ message: 'Gallery not found' })
     }
+    console.log('INDIVIDUAL GALLERY', gallery)
     return { gallery }
   },
 }
