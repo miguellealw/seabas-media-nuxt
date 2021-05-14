@@ -30,6 +30,9 @@
 </script>
 -->
 
+
+<!-- `"https://res.cloudinary.com/miguelleal/image/upload/c_thumb,w_200,g_face/v1601685489/sebas-portfolio-vue/images/${imageType}/${imageCounter}.jpg"` -->
+
 <template>
   <main>
     <section v-if="galleries">
@@ -42,7 +45,13 @@
         <li class="m-4 p-4 bg-gray-300 md:grid-cols-3" v-for="(gallery, index) in galleries" :key="index">
           <h2>{{ gallery.title }}</h2>
           <div v-if="gallery.images" class="nuxt-content grid grid-cols-3 gap-3">
-            <img v-for="image in gallery.images" class="image" :key="image.id" :src="image" />
+            <!-- <img v-for="image in gallery.images" class="image" :key="image.id" :src="image" /> -->
+            <img
+              v-for="image in gallery.images"
+              class="image"
+              :key="image.id"
+              :src="`https://res.cloudinary.com/miguelleal/image/uploadc_thumb,w_200,g_face/v1620969351${gallery.path}/01.jpg`"
+            />
           </div>
         </li>
       </ul>
@@ -64,11 +73,26 @@
 export default {
   async asyncData({ $content, params, error }) {
     let galleries
+
     try {
       galleries = await $content('gallery').fetch()
     } catch (e) {
       error({ message: 'Gallery not found' })
     }
+    console.log('GALL', galleries)
+
+    // const gallLinks = galleries.map(gall => gall + )
+
+    // iterate over galleries
+    // iterate over images array in galleries
+
+    // create an array of objects
+
+    /*
+
+
+    */
+
     return { galleries }
   },
 }
