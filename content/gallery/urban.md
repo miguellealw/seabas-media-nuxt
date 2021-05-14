@@ -5,5 +5,6 @@ gallery:
   - /img/slides_graph.png
   - /img/eol_mac_unix_windows.png
 images:
-  - /sample.jpg
+  - /07.jpg
+  - /02.jpg
 ---
