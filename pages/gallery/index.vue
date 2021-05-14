@@ -30,7 +30,7 @@
     </main>
 
     <LightBox ref="lightbox" :media="media" :show-caption="true" :show-light-box="false" site-loading="Loading..." />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 

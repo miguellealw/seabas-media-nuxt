@@ -12,7 +12,7 @@
     <!-- Contact Me -->
     <home-contact-me />
 
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
