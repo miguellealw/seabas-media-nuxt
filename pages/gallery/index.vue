@@ -50,7 +50,7 @@
               v-for="image in gallery.images"
               class="image"
               :key="image.id"
-              :src="`https://res.cloudinary.com/miguelleal/image/uploadc_thumb,w_200,g_face/v1620969351${gallery.path}${image}`"
+              :src="`https://res.cloudinary.com/miguelleal/image/upload/c_thumb,w_200,g_face/v1620969351${gallery.path}${image}`"
             />
           </div>
         </li>
