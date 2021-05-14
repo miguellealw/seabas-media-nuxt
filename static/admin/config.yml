@@ -10,6 +10,13 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+media_library:
+  name: cloudinary
+  output_filename_only: true
+  config:
+    cloud_name: miguelleal
+    api_key: 424312355236312
+
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
   - label: 'Site settings'
