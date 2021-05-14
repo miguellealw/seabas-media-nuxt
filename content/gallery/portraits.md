@@ -1,4 +1,5 @@
 ---
 title: Portraits
-images: []
+images:
+  - /img/sample.jpg
 ---
