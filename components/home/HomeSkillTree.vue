@@ -42,6 +42,11 @@
 export default {
   name: 'HomeSKillTree',
   props: ['skills'],
+  mounted() {
+    if (process.client) {
+      const Velocity = () => import('velocity-animate')
+    }
+  },
   methods: {
     beforeEnter: function (el) {
       el.style.opacity = 0
@@ -51,7 +56,7 @@ export default {
       // Wait 2 seconds to start animation
       setTimeout(() => {
         setTimeout(function () {
-          // Velocity(el, { opacity: 1 }, { complete: done })
+          Velocity(el, { opacity: 1 }, { complete: done })
         }, delay)
       }, 2000)
     },

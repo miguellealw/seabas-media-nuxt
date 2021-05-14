@@ -71,7 +71,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-content-placeholders.js'],
+  plugins: ['~/plugins/vue-content-placeholders.js', { src: '~plugins/velocity.js', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
