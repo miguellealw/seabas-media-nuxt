@@ -1,100 +1,91 @@
-<!--
 <template>
-  <main>
-    <section v-if="galleries" class="w-full max-w-5xl mx-auto">
-      <h1 class="title">Image Gallery</h1>
-      <ul>
-        <li class="m-4 p-4 bg-gray-300" v-for="(gallery, index) in galleries" :key="index">
-          <nuxt-link class="card card--clickable" :to="`gallery/${gallery.slug}`">{{ gallery.title }}</nuxt-link>
-        </li>
-      </ul>
-    </section>
-  </main>
-</template>
--->
+  <div class="remove-smooth-scroll">
+    <gallery-header />
+    <main class="w-3/4 mx-auto my-4 max-w-screen-lg mt-20 relative">
+      <router-link to="/" class="uppercase block mb-5 text-xs text-gray-500">Home Page</router-link>
 
-<!--
-<script>
-// export default {
-//   async asyncData({ $content, error }) {
-//     let galleries
-//     try {
-//       galleries = await $content('gallery').fetch()
-//     } catch (e) {
-//       error({ message: 'Gallery not found' })
-//     }
-//     console.log('GALLERIES', galleries)
-//     return { galleries }
-//   },
-// }
-</script>
--->
+      <!-- Photography Section -->
+      <div id="photography">
+        <h3 class="heading-xs-uppercase">Photography</h3>
+        <hr class="w-10 my-3" />
 
+        <!-- Portraits Section -->
+        <work-type-category
+          category="Portraits"
+          :images="images.portraits"
+          :openGallery="openGallery"
+          :media="media"
+          sectionId="photography-portraits"
+        />
 
-<!-- `"https://res.cloudinary.com/miguelleal/image/upload/c_thumb,w_200,g_face/v1601685489/sebas-portfolio-vue/images/${imageType}/${imageCounter}.jpg"` -->
+        <!-- Urban Section -->
+        <work-type-category
+          category="Urban"
+          :images="images.urban"
+          :openGallery="openGallery"
+          :media="media"
+          sectionId="photography-urban"
+        />
+      </div>
+    </main>
 
-<template>
-  <main>
-    <section v-if="galleries">
-      <nav class="mb-8" aria-label="go back">
-        <router-back class="block" />
-      </nav>
-      <h1 class="title">Image Gallery</h1>
-
-      <ul>
-        <li class="m-4 p-4 bg-gray-300 md:grid-cols-3" v-for="(gallery, index) in galleries" :key="index">
-          <h2>{{ gallery.title }}</h2>
-          <div v-if="gallery.images" class="nuxt-content grid grid-cols-3 gap-3">
-            <!-- <img v-for="image in gallery.images" class="image" :key="image.id" :src="image" /> -->
-            <img
-              v-for="image in gallery.images"
-              class="image"
-              :key="image.id"
-              :src="`https://res.cloudinary.com/miguelleal/image/upload/c_thumb,w_200,g_face/v1620969351${gallery.path}${image}`"
-            />
-          </div>
-        </li>
-      </ul>
-
-      <!-- <article>
-        <img v-if="post.cover" class="cover-image" :src="post.cover" />
-        <h1 class="">{{ post.title }}</h1>
-        <p class="mt-1 mb-8 text-primary-600 dark:text-primary-400">{{ post.description }}</p>
-        <nuxt-content :document="post" />
-        <div v-if="post.gallery" class="nuxt-content">
-          <img v-for="image in post.gallery" class="image" :key="image.id" :src="image" />
-        </div>
-      </article> -->
-    </section>
-  </main>
+    <LightBox ref="lightbox" :media="media" :show-caption="true" :show-light-box="false" site-loading="Loading..." />
+    <!-- <Footer /> -->
+  </div>
 </template>
 
 <script>
+import LightBox from '/components/LightBox/LightBox.vue'
+
+import { portraitImageLinks, urbanImageLinks } from '../../utils/data-links'
+
+// Components
+import GalleryHeader from '/components/gallery/GalleryHeader.vue'
+import WorkTypeCategory from '/components/gallery/WorkTypeCategory.vue'
+import Footer from '/components/global/Footer'
+
+// for getting lightbox to work
+const portraitTotal = 12
+const urbanTotal = 9
+
+// create arrays of image src links
+const portraits = portraitImageLinks.map((obj) => obj.src)
+const urban = urbanImageLinks.map((obj) => obj.src)
+
 export default {
-  async asyncData({ $content, params, error }) {
-    let galleries
+  name: 'WorkGalleryPage',
+  components: { GalleryHeader, WorkTypeCategory, Footer, LightBox },
 
-    try {
-      galleries = await $content('gallery').fetch()
-    } catch (e) {
-      error({ message: 'Gallery not found' })
+  data: () => {
+    return {
+      images: { portraits, urban },
+      media: [...portraitImageLinks, ...urbanImageLinks],
+      mediaCount: {
+        portraitCount: portraitImageLinks.length,
+        urbanCount: urbanImageLinks.length,
+      },
     }
-    console.log('GALL', galleries)
+  },
 
-    // const gallLinks = galleries.map(gall => gall + )
+  mounted() {
+    window.scrollTo(0, 0)
+  },
 
-    // iterate over galleries
-    // iterate over images array in galleries
-
-    // create an array of objects
-
-    /*
-
-
-    */
-
-    return { galleries }
+  methods: {
+    openGallery(galleryType, index) {
+      if (galleryType == 'Portraits') {
+        this.$refs.lightbox.showImage(index)
+      } else if (galleryType == 'Urban') {
+        const offsetIndex = portraitTotal + index
+        this.$refs.lightbox.showImage(offsetIndex)
+      }
+    },
   },
 }
 </script>
 
+<style scoped>
+.remove-smooth-scroll {
+  scroll-behavior: auto;
+}
+</style>
