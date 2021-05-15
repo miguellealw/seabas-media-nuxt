@@ -9,23 +9,15 @@
         <h3 class="heading-xs-uppercase">Photography</h3>
         <hr class="w-10 my-3" />
 
-        <!-- Portraits Section -->
-        <work-type-category
-          category="Portraits"
-          :images="images.portraits"
-          :openGallery="openGallery"
-          :media="media"
-          sectionId="photography-portraits"
-        />
-
-        <!-- Urban Section -->
-        <work-type-category
-          category="Urban"
-          :images="images.urban"
-          :openGallery="openGallery"
-          :media="media"
-          sectionId="photography-urban"
-        />
+        <div v-for="(gallery, index) in galleries" :key="index">
+          <work-type-category
+            category="DEBUG"
+            :images="images[gallery.slug]"
+            :galleryPath="gallery.path"
+            :openGallery="openGallery"
+            sectionId="photography-portraits"
+          />
+        </div>
       </div>
     </main>
 
@@ -37,7 +29,7 @@
 <script>
 import LightBox from '/components/LightBox/LightBox.vue'
 
-import { portraitImageLinks, urbanImageLinks } from '../../utils/data-links'
+import { createImageLink } from '/utils/data-links.js'
 
 // Components
 import GalleryHeader from '/components/gallery/GalleryHeader.vue'
@@ -48,23 +40,39 @@ import Footer from '/components/global/Footer'
 const portraitTotal = 12
 const urbanTotal = 9
 
-// create arrays of image src links
-const portraits = portraitImageLinks.map((obj) => obj.src)
-const urban = urbanImageLinks.map((obj) => obj.src)
-
 export default {
   name: 'WorkGalleryPage',
   components: { GalleryHeader, WorkTypeCategory, Footer, LightBox },
 
-  data: () => {
-    return {
-      images: { portraits, urban },
-      media: [...portraitImageLinks, ...urbanImageLinks],
-      mediaCount: {
-        portraitCount: portraitImageLinks.length,
-        urbanCount: urbanImageLinks.length,
-      },
+  async asyncData({ $content, params, error }) {
+    let galleries, media, images
+
+    try {
+      galleries = await $content('gallery').fetch()
+
+      // create media arr (src and thumb links) for LightBox
+      media = galleries.map((gallery) => {
+        return gallery.images.map((image) => createImageLink(gallery.path + image))
+      })
+      media = media.flat()
+
+      // for WorkTypeCategory
+      images = galleries.reduce((acc, gallery) => {
+        return {
+          ...acc,
+          [gallery.slug]: gallery.images.map((image) => createImageLink(gallery.path + image).src),
+        }
+      }, {})
+
+      // console.log('MEDIA', media)
+      // console.log('IMAGES', images)
+    } catch (e) {
+      error({ Message: 'Gallery not found' })
     }
+
+    console.log('GALL', galleries)
+
+    return { galleries, media, images }
   },
 
   mounted() {

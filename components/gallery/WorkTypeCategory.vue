@@ -6,7 +6,7 @@
         @click="openGallery(category, index)"
         class="bg-gray-300 cursor-pointer"
         v-for="(image, index) of images"
-        :key="image"
+        :key="index"
       >
         <LazyImage
           class="h-full w-full object-cover object-center"
@@ -40,6 +40,6 @@ import LazyImage from '../global/LazyImage.vue'
 
 export default {
   components: { LazyImage },
-  props: ['category', 'images', 'openGallery', 'media', 'sectionId'],
+  props: ['category', 'images', 'openGallery', 'galleryPath', 'sectionId'],
 }
 </script>
