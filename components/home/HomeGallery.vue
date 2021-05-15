@@ -1,11 +1,6 @@
 <template>
-  <section
-    id="my-work"
-    class="second-fade-in w-full mx-auto min-h-screen md:h-screen relative flex items-center"
-  >
-    <div
-      class="w-3/4 lg:w-1/2 flex items-center flex-col relative h-full mx-auto md:-top-10 inset-0"
-    >
+  <section id="my-work" class="second-fade-in w-full mx-auto min-h-screen md:h-screen relative flex items-center">
+    <div class="w-3/4 lg:w-1/2 flex items-center flex-col relative h-full mx-auto md:-top-10 inset-0">
       <!-- Decorative Line -->
       <!-- <svg
           width="1"
@@ -16,14 +11,8 @@
           <path fill="#fff" d="M0 0h1v260H0z" />
         </svg> -->
 
-      <h3
-        class="font-bold uppercase tracking-widest md:text-white text-sm my-10 md:my-2 self-start"
-      >
-        My Work
-      </h3>
-      <ul
-        class="h-full grid grid-cols-2 grid-rows-myWorkGallery md:grid-rows-2 gap-2 lg:gap-6"
-      >
+      <h3 class="font-bold uppercase tracking-widest md:text-white text-sm my-10 md:my-2 self-start">My Work</h3>
+      <ul class="h-full grid grid-cols-2 grid-rows-myWorkGallery md:grid-rows-2 gap-2 lg:gap-6">
         <li v-for="image in images" :key="image" class="overflow-hidden">
           <img
             :src="image"
@@ -34,10 +23,7 @@
       </ul>
 
       <!-- NOTE: put router link outside button so it loads button on ipad -->
-      <router-link
-        to="/my-work"
-        class="my-work-button mt-5 self-center md:self-start"
-      >
+      <router-link to="/gallery" class="my-work-button mt-5 self-center md:self-start">
         <button
           class="uppercase px-10 py-3 text-xs block hover:bg-black hover:text-white"
           style="border: 2px solid black"
@@ -120,12 +106,12 @@ export default {
   data: () => {
     return {
       images: [
-        "https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685473/sebas-portfolio-vue/images/portraits/01.jpg",
-        "https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685475/sebas-portfolio-vue/images/portraits/11.jpg",
-        "https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685489/sebas-portfolio-vue/images/urban/02.jpg",
-        "https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685474/sebas-portfolio-vue/images/portraits/04.jpg",
+        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685473/sebas-portfolio-vue/images/portraits/01.jpg',
+        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685475/sebas-portfolio-vue/images/portraits/11.jpg',
+        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685489/sebas-portfolio-vue/images/urban/02.jpg',
+        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685474/sebas-portfolio-vue/images/portraits/04.jpg',
       ],
-    };
+    }
   },
-};
+}
 </script>
