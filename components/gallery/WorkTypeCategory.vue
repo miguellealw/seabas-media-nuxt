@@ -2,12 +2,7 @@
   <section :id="sectionId" class="my-10">
     <h4 class="heading-xs-uppercase text-gray-500">{{ category }}</h4>
     <ul class="w-full mt-3 mx-auto grid grid-cols-2 md:grid-cols-4 grid-flow-row gap-3">
-      <li
-        @click="openGallery(category, index)"
-        class="bg-gray-300 cursor-pointer"
-        v-for="(image, index) of images"
-        :key="index"
-      >
+      <li @click="openGallery(image)" class="bg-gray-300 cursor-pointer" v-for="(image, index) of images" :key="index">
         <LazyImage
           class="h-full w-full object-cover object-center"
           :lozad-lazy-src="image"

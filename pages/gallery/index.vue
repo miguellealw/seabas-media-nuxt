@@ -11,7 +11,7 @@
 
         <div v-for="(gallery, index) in galleries" :key="index">
           <work-type-category
-            category="DEBUG"
+            :category="gallery.title"
             :images="images[gallery.slug]"
             :galleryPath="gallery.path"
             :openGallery="openGallery"
@@ -40,13 +40,13 @@ import Footer from '/components/global/Footer'
 const portraitTotal = 12
 const urbanTotal = 9
 
+let galleries, media, images
+
 export default {
   name: 'WorkGalleryPage',
   components: { GalleryHeader, WorkTypeCategory, Footer, LightBox },
 
   async asyncData({ $content, params, error }) {
-    let galleries, media, images
-
     try {
       galleries = await $content('gallery').fetch()
 
@@ -65,7 +65,7 @@ export default {
       }, {})
 
       // console.log('MEDIA', media)
-      // console.log('IMAGES', images)
+      console.log('IMAGES', images)
     } catch (e) {
       error({ Message: 'Gallery not found' })
     }
@@ -80,13 +80,13 @@ export default {
   },
 
   methods: {
-    openGallery(galleryType, index) {
-      if (galleryType == 'Portraits') {
-        this.$refs.lightbox.showImage(index)
-      } else if (galleryType == 'Urban') {
-        const offsetIndex = portraitTotal + index
-        this.$refs.lightbox.showImage(offsetIndex)
-      }
+    /**
+     * @params {string} imageLinkSrc - image link src that will be used to find index from media array
+     */
+    openGallery(imageLinkSrc) {
+      // use media array since it contains a flatten array of all images, therefore the link that corresponds with its index will be the index the light box will take
+      const index = this.media.findIndex((link) => link.src == imageLinkSrc)
+      this.$refs.lightbox.showImage(index)
     },
   },
 }
