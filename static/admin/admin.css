@@ -8,11 +8,6 @@
   padding-top: 0.5rem;
 }
 
-#nc-root section > span {
-  margin: 0 auto;
-  width: 0;
-}
-
 html {
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -ms-text-size-adjust: 100%;
