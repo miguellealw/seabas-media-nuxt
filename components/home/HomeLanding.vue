@@ -55,7 +55,7 @@
           <span class="font-black">Follow Me</span>
           <ul class="mt-2 text-xxs md:text-xs">
             <li>
-              <a href="https://www.instagram.com/sebastiangleal/?hl=en" target="_blank">Instagram</a>
+              <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">Instagram</a>
             </li>
             <!-- <li class="my-2 md:my-auto">
                 <a
