@@ -28,7 +28,7 @@
       >
         <!-- Logo and Nav -->
         <div class="second-fade-in">
-          <h2 class="text-sm md:text-xl font-bold uppercase tracking-widest">Leal Media | Sebastian Leal</h2>
+          <h2 class="text-sm md:text-xl font-bold uppercase tracking-widest">Seabas Media | Sebastian Leal</h2>
           <!-- Navigation -->
 
           <nav
