@@ -8,6 +8,8 @@ images:
   - - /Copy_of_IMG_6858_oys6md.jpg
   - - /Copy_of_IMG_6797_mk0n6t.jpg
   - - /Copy_of_IMG_3049-Edit_qavo0e.jpg
+  - - /IMG_4266_z4cgpd.jpg
+  - - /IMG_3033_mf4i8x.jpg
+  - - /IMG_3180_euvuvz.jpg
   - - /Copy_of_IMG_3176_weudyj.jpg
-  - - /Copy_of_IMG_4266_w1k6fn.jpg
 ---
