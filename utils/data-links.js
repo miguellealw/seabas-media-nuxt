@@ -1,7 +1,7 @@
 const cloudImageQuality = 'q_auto:low'
 const cloudImageFormat = 'f_auto'
-const cloudName = 'miguelleal'
-const cloudVersion = 'v1620969351'
+const cloudName = 'seabas-media'
+const cloudVersion = 'v1621218000'
 
 /**
  *
