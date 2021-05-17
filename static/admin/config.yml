@@ -98,7 +98,7 @@ collections:
     label_singular: 'Gallery'
     name: 'gallery'
     slug: '{{ slug }}'
-    preview_path: 'gallery/{{slug}}'
+    preview_path: '/gallery'
     create: true
     folder: 'content/gallery'
     required: false
