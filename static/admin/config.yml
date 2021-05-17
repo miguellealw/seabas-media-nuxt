@@ -15,8 +15,8 @@ media_library:
   output_filename_only: true
   config:
     multiple: true
-    cloud_name: miguelleal
-    api_key: 424312355236312
+    cloud_name: seabas-media
+    api_key: 733379514124262
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
