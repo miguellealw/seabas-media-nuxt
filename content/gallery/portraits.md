@@ -14,4 +14,6 @@ images:
   - - /Copy_of_IMG_3176_weudyj.jpg
   - - /IMG_3440_zpn9cj.jpg
   - - /IMG_3360_llbmm3.jpg
+  - - /IMG_2707_lunici.jpg
+  - - /IMG_2673_qezwz7.jpg
 ---
