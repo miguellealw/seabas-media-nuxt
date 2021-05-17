@@ -1,5 +1,5 @@
 ---
-title: Urban
+title: Creative
 gallery:
   - /img/top-sort.png
   - /img/slides_graph.png
