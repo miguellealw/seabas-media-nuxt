@@ -98,8 +98,8 @@ collections:
     label_singular: 'Gallery'
     name: 'gallery'
     slug: '{{ slug }}'
-    identifier_field: name
-    preview_path: 'content/gallery/{{ slug }}'
+    # identifier_field: name
+    preview_path: 'content/gallery/portraits'
     create: true
     folder: 'content/gallery'
     required: false
