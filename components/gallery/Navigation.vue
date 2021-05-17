@@ -2,13 +2,7 @@
   <nav>
     <!-- Nav Icon -->
     <span @click="handleOpenNav">
-      <svg
-        class="cursor-pointer"
-        width="20"
-        height="6"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg class="cursor-pointer" width="20" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill="#000" d="M0 4h20v2H0zM0 0h20v2H0z" />
       </svg>
     </span>
@@ -34,14 +28,10 @@
       </span>
       <ul>
         <li class="my-2 text-gray-500" @click="handleOpenNav">
-          <a href="#photography" class="tracking-widest hover:text-black"
-            >Photography</a
-          >
+          <a href="#photography" class="tracking-widest hover:text-black">Photography</a>
           <ul>
             <li class="my-2 ml-4 text-gray-500 hover:text-black">
-              <a href="#photography-portraits" class="tracking-widest">
-                - Portraits</a
-              >
+              <a href="#photography-portraits" class="tracking-widest"> - Portraits</a>
             </li>
             <li class="my-2 ml-4 text-gray-500 hover:text-black">
               <a href="#photography-urban" class="tracking-widest">- Urban</a>
@@ -60,16 +50,12 @@
         <hr class="my-5" />
 
         <li>Contact Me</li>
-        <li class="my-2 text-gray-500 hover:text-black" >
+        <li class="my-2 text-gray-500 hover:text-black">
           <a href="mailto:leal5325@live.com">Email Me</a>
         </li>
 
         <li class="my-2 text-gray-500 hover:text-black">
-          <a
-            href="https://www.instagram.com/sebastiangleal/?hl=en"
-            target="_blank"
-            >Message Me on Instagram</a
-          >
+          <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">Message Me on Instagram</a>
         </li>
       </ul>
     </div>
@@ -81,17 +67,17 @@ export default {
   data() {
     return {
       isNavOpen: false,
-      navDisplayStyle: "none",
-    };
+      navDisplayStyle: 'none',
+    }
   },
   methods: {
     handleOpenNav: function (e) {
-      this.isNavOpen = !this.isNavOpen;
+      this.isNavOpen = !this.isNavOpen
 
-      this.navDisplayStyle = this.isNavOpen ? "flex" : "none";
+      this.navDisplayStyle = this.isNavOpen ? 'flex' : 'none'
     },
   },
-};
+}
 </script>
 
 <style scoped>
