@@ -99,7 +99,7 @@ collections:
     name: 'gallery'
     slug: '{{ slug }}'
     # identifier_field: name
-    preview_path: '/gallery/'
+    # preview_path: '/gallery/'
     create: true
     folder: 'content/gallery'
     required: false
