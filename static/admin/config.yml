@@ -84,20 +84,20 @@ collections:
   #         summary: '{{fields.image}}',
   #         field: { label: 'Image', name: 'image', widget: 'image' },
   #       }
-  - label: 'About Me'
-    name: 'aboutme'
-    slug: '{{ slug }}'
-    preview_path: '/#{{ slug }}'
-    folder: 'content/{{ slug }}'
-    required: true
-    fields:
-      - { label: 'About Me Text', name: 'aboutmetext', widget: 'text' }
-      - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
+  # - label: 'About Me'
+  #   name: 'aboutme'
+  #   slug: '{{ slug }}'
+  #   preview_path: '/#{{ slug }}'
+  #   folder: 'content/{{ slug }}'
+  #   required: true
+  #   fields:
+  #     - { label: 'About Me Text', name: 'aboutmetext', widget: 'text' }
+  #     - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
 
   - label: 'Galleries'
     label_singular: 'Gallery'
     name: 'gallery'
-    slug: '{{ slug }}'
+    # slug: '{{ slug }}'
     # identifier_field: name
     # preview_path: '/gallery/'
     create: true
