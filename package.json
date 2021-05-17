@@ -1,8 +1,8 @@
 {
-  "name": "ntn-boilerplate",
+  "name": "SeabasMedia",
   "version": "2.0.1",
-  "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
-  "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
+  "description": "Seabas Media | Photographer from Texas",
+  "author": "Miguel Leal",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
