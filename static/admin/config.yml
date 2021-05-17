@@ -84,21 +84,28 @@ collections:
   #         summary: '{{fields.image}}',
   #         field: { label: 'Image', name: 'image', widget: 'image' },
   #       }
-  - label: 'About Me'
-    name: 'about me'
+  - label: 'User Settings'
+    name: 'usersettings'
     slug: '{{ slug }}'
     preview_path: '/#{{ slug }}'
     folder: 'content/{{ slug }}'
     required: true
-    fields:
-      - { label: 'About Me Text', name: 'about me text', widget: 'text' }
-      - { label: 'About Me Image', name: 'about me image', widget: 'image' }
+    files:
+      - label: 'About Me'
+        name: 'about me'
+        file: 'content/site/about_me.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'About Me Text', name: 'aboutmetext', widget: 'text' }
+          - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
 
   - label: 'Galleries'
     label_singular: 'Gallery'
     name: 'gallery'
     slug: '{{ slug }}'
-    preview_path: '/gallery'
+    preview_path: 'gallery'
     create: true
     folder: 'content/gallery'
     required: false
