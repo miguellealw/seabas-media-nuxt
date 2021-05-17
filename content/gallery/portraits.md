@@ -12,4 +12,6 @@ images:
   - - /IMG_3033_mf4i8x.jpg
   - - /IMG_3180_euvuvz.jpg
   - - /Copy_of_IMG_3176_weudyj.jpg
+  - - /IMG_3440_zpn9cj.jpg
+  - - /IMG_3360_llbmm3.jpg
 ---
