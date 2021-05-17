@@ -21,7 +21,8 @@
         {{ skill }}
 
         <!-- Skill Tree -->
-        <span id="line-photo"></span>
+        <!-- TODO: make this dynamic based on galleries from cms -->
+        <!-- <span id="line-photo"></span>
         <ul id="sub-menu-photo">
           <router-link to="my-work">
             <li>Portraits</li>
@@ -30,7 +31,7 @@
           <router-link to="my-work">
             <li>Urban</li>
           </router-link>
-        </ul>
+        </ul> -->
       </li>
     </transition-group>
   </div>

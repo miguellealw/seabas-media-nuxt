@@ -36,10 +36,6 @@ import GalleryHeader from '/components/gallery/GalleryHeader.vue'
 import WorkTypeCategory from '/components/gallery/WorkTypeCategory.vue'
 import Footer from '/components/global/Footer'
 
-// for getting lightbox to work
-const portraitTotal = 12
-const urbanTotal = 9
-
 let galleries, media, images
 
 export default {
@@ -65,7 +61,7 @@ export default {
       }, {})
 
       // console.log('MEDIA', media)
-      console.log('IMAGES', images)
+      // console.log('IMAGES', images)
     } catch (e) {
       error({ Message: 'Gallery not found' })
     }
@@ -84,7 +80,8 @@ export default {
      * @params {string} imageLinkSrc - image link src that will be used to find index from media array
      */
     openGallery(imageLinkSrc) {
-      // use media array since it contains a flatten array of all images, therefore the link that corresponds with its index will be the index the light box will take
+      // use media array since it contains a flattened array of all images from different gallereis,
+      // therefore the link that corresponds with its index will be the index the light box will take
       const index = this.media.findIndex((link) => link.src == imageLinkSrc)
       this.$refs.lightbox.showImage(index)
     },

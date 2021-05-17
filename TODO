@@ -1,0 +1,24 @@
+Fix Issues:
+☐ fix favicon on mobile
+☐ fix images not being previewed properly in CMS
+  - https://www.netlifycms.org/docs/deploy-preview-links/
+☐ make skill tree dynamic with galleries
+☐ fix navigation in gallery. make dynamic based on galleries added from CMS
+☐ allow editing on home page gallery through CMS
+☐ allow editing on home page about me through CMS
+☐ fix identiy emails redirecting to root page
+  - https://github.com/netlify/netlify-cms/issues/5109
+  - https://answers.netlify.com/t/common-issue-netlify-cms-git-gateway-email-not-confirmed/10690
+☐ title of website should come from content/site/info.json
+☐ add skeleton loading in gallery w/ vue-content-placeholder
+
+  - https://github.com/michalsnik/vue-content-placeholders
+  - https://learnvue.co/2020/04/vue-skeleton-loading-screen-using-suspense-components-daily-vue-4/
+
+☐ make changing cloudinary easier for dev and production
+  ☐ add env vars
+  - https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html
+
+
+Future Todos:
+☐ allow for adding videos and graphic design
