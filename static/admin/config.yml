@@ -103,8 +103,10 @@ collections:
     create: true
     folder: 'content/gallery'
     required: false
+    sortable_fields: ['position']
     fields:
       - { label: 'Gallery Title', name: 'title', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'number' }
       - {
           label: 'Images',
           name: 'images',
