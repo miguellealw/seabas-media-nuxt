@@ -57,13 +57,9 @@
             <li>
               <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">Instagram</a>
             </li>
-            <!-- <li class="my-2 md:my-auto">
-                <a
-                  href="https://www.tiktok.com/@sebastiangleal?lang=en"
-                  target="_blank"
-                  >Tik Tok</a
-                >
-              </li> -->
+            <li class="my-2 md:my-auto">
+              <a href="https://www.tiktok.com/@sebastiangleal?lang=en" target="_blank">Tik Tok</a>
+            </li>
             <li>
               <a href="https://www.youtube.com/user/OW3NxX" target="_blank">YouTube</a>
             </li>
