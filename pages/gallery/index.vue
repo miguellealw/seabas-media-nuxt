@@ -36,7 +36,7 @@ import GalleryHeader from '/components/gallery/GalleryHeader.vue'
 import WorkTypeCategory from '/components/gallery/WorkTypeCategory.vue'
 import Footer from '/components/global/Footer'
 
-let galleries, media, images
+let galleries, sortedGalleries, media, images
 
 export default {
   name: 'WorkGalleryPage',
@@ -44,7 +44,11 @@ export default {
 
   async asyncData({ $content, params, error }) {
     try {
+      // TODO: get position of each gallery and place in new array with position being index
+      // TODO: sort based on position field
       galleries = await $content('gallery').fetch()
+      galleries.sort((g1, g2) => g1.position - g2.position)
+      // sortedGalleries = Array.from({ length: galleries.length })
 
       // create media arr (src and thumb links) for LightBox
       media = galleries.map((gallery) => {
