@@ -14,8 +14,4 @@ images:
   - - /IMG_6379_zglt7b.jpg
   - - /IMG_4408_lcbpvt.jpg
   - - /IMG_4401_gaexhr.jpg
-  - - /IMG_7277_pcs37l.jpg
-    - /IMG_2707_lunici.jpg
-    - /IMG_4266_zrbjjb.jpg
-    - /IMG_5240_n48dxw.jpg
 ---
