@@ -98,8 +98,8 @@ collections:
         file: 'content/home/aboutme.md'
         format: 'markdown'
         fields:
-          - label: 'About Me Text' 
-            name: 'aboutmetext' 
+          - label: 'About Me Text'
+            name: 'aboutmetext'
             widget: 'text'
           - label: 'About Me Image'
             name: 'aboutmeimage'
@@ -116,30 +116,28 @@ collections:
     required: false
     sortable_fields: ['position']
     fields:
-      - label: 'Gallery Title' 
-        name: 'title' 
-        widget: 'string' 
+      - label: 'Gallery Title'
+        name: 'title'
+        widget: 'string'
       - label: 'Position'
         name: 'position'
         widget: 'number'
         hint: 'order in which gallery will be displayed in the site'
-        
+
       - label: 'Images'
         name: 'images'
         widget: 'list'
         required: false
         summary: '{{fields.image}}'
-        field:  
-          - label: 'Image', 
-            name: 'image', 
-            widget: 'image', 
-            media_library: 
-              config: 
+        field:
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            media_library:
+              config:
                 default_transformations:
                   - fetch_format: auto
-                    width: 300    
+                    width: 300
                     quality: low
                     crop: fill
                     effect: grayscale
-        
-        
