@@ -7,5 +7,5 @@ aboutmetext: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
   doloremque veritatis, corporis quidem voluptates fugit consequatur pariatur
   nulla repudiandae autem. Deserunt et aut repellendus! Fuga, quod minima.
 aboutmeimage:
-  - /profile-pic_brykz9.jpg
+  - https://res.cloudinary.com/seabas-media/image/upload/v1621400791/gallery/About%20Me/profile-pic_brykz9.jpg
 ---
