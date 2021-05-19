@@ -12,7 +12,11 @@ backend:
 
 media_library:
   name: cloudinary
-  output_filename_only: true
+  output_filename_only: false
+  default_transformations:
+    - - fetch_format: auto
+        width: 200
+        quality: low
   config:
     multiple: true
     cloud_name: seabas-media
@@ -87,6 +91,7 @@ collections:
 
   - label: 'Home Page'
     name: 'home'
+    folder: 'content/home'
     files:
       - label: 'About Me'
         name: 'aboutme'
