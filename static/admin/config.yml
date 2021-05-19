@@ -87,7 +87,7 @@ collections:
 
   - label: 'Home Page'
     name: 'home'
-    folder: 'content/home'
+    # folder: 'content/home'
     files:
       - label: 'About Me'
         name: 'aboutme'
@@ -122,6 +122,6 @@ collections:
       - label: 'Images'
         name: 'images'
         widget: 'list'
-        required: false
+        # required: false
         summary: '{{fields.image}}'
         field: { label: 'Image', name: 'image', widget: 'image' }
