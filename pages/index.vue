@@ -31,11 +31,9 @@ export default {
     try {
       aboutMe = await $content('home').fetch()
 
-      imageLink = `https://res.cloudinary.com/seabas-media/image/upload/v1621300807/gallery/About Me/${aboutMe[0].aboutmeimage[0]}`
-
       return {
         text: aboutMe[0].aboutmetext,
-        image: imageLink,
+        image: aboutMe[0].aboutmeimage,
       }
     } catch (e) {
       error({ Message: 'Gallery not found' })
