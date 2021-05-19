@@ -9,6 +9,7 @@
         <h3 class="heading-xs-uppercase">Photography</h3>
         <hr class="w-10 my-3" />
 
+        <!-- TODO: dynamic sectionId -->
         <div v-for="(gallery, index) in galleries" :key="index">
           <work-type-category
             :category="gallery.title"
@@ -36,7 +37,16 @@ import GalleryHeader from '/components/gallery/GalleryHeader.vue'
 import WorkTypeCategory from '/components/gallery/WorkTypeCategory.vue'
 import Footer from '/components/global/Footer'
 
-let galleries, sortedGalleries, media, images
+let galleries, media, images, imageLinks
+
+function getFileName(link) {
+  if (!link.includes('https')) return link
+
+  let first_link_arr = link.split('/')
+  let filename = first_link_arr[first_link_arr.length - 1]
+
+  return filename
+}
 
 export default {
   name: 'WorkGalleryPage',
@@ -44,33 +54,33 @@ export default {
 
   async asyncData({ $content, params, error }) {
     try {
-      // TODO: get position of each gallery and place in new array with position being index
-      // TODO: sort based on position field
       galleries = await $content('gallery').fetch()
+      // sort galleries based on position
       galleries.sort((g1, g2) => g1.position - g2.position)
-      // sortedGalleries = Array.from({ length: galleries.length })
-
-      // create media arr (src and thumb links) for LightBox
-      media = galleries.map((gallery) => {
-        return gallery.images.map((image) => createImageLink(gallery.path + image))
-      })
-      media = media.flat()
 
       // for WorkTypeCategory
       images = galleries.reduce((acc, gallery) => {
+        imageLinks = gallery.images.flat()
+
         return {
           ...acc,
-          [gallery.slug]: gallery.images.map((image) => createImageLink(gallery.path + image).src),
+          [gallery.slug]: imageLinks.map((link) => createImageLink(gallery.path + `/${getFileName(link)}`).src),
         }
       }, {})
+
+      // create media arr (src and thumb links) for LightBox
+      media = galleries.map((gallery) => {
+        imageLinks = gallery.images.flat()
+        return imageLinks.map((link) => createImageLink(gallery.path + `/${getFileName(link)}`))
+      })
+      // flatten array of arrays into 1 array
+      media = media.flat()
 
       // console.log('MEDIA', media)
       // console.log('IMAGES', images)
     } catch (e) {
       error({ Message: 'Gallery not found' })
     }
-
-    console.log('GALL', galleries)
 
     return { galleries, media, images }
   },

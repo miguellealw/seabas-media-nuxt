@@ -13,12 +13,12 @@ backend:
 media_library:
   name: cloudinary
   output_filename_only: false
-  default_transformations:
-    - - fetch_format: auto
-        width: 300
-        quality: low
-        crop: fill
-        effect: grayscalew
+  # default_transformations:
+  #   - - fetch_format: auto
+  #       width: 300
+  #       quality: low
+  #       crop: fill
+  #       effect: grayscalew
   config:
     multiple: true
     cloud_name: seabas-media
@@ -110,10 +110,13 @@ collections:
   - label: 'Galleries'
     label_singular: 'Gallery'
     name: 'gallery'
-    # slug: '{{ slug }}'
+    slug: '{{ slug }}'
     # identifier_field: name
-    preview_path: '/gallery/{{filename}}.{{extension}}'
+    # preview_path: '/gallery/{{filename}}.{{extension}}'
+    preview_path: '/gallery'
     create: true
+    editor:
+      preview: false
     folder: 'content/gallery'
     required: false
     sortable_fields: ['position']
