@@ -1,12 +1,5 @@
 <template>
-  <!-- <div>
-    <div v-if="loading">
-      <span>LOADING...</span>
-    </div>
-    <div v-else>
-    </div>
-  </div> -->
-  <img :data-src="lozadLazySrc" :data-srcset="lozadLazySrcset" :style="style" />
+  <img :data-src="lozadLazySrc" :style="style" />
 </template>
 
 <script>
@@ -43,11 +36,10 @@ export default {
     openGallery: {
       type: Function,
     },
-  },
-  data() {
-    return {
-      loading: true,
-    }
+    loading: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     aspectRatio() {
@@ -84,20 +76,28 @@ export default {
       return style
     },
   },
+  methods: {
+    setLoadingState() {
+      let isLoading = this.loading
+      isLoading = false
+      this.$emit('image-loaded', isLoading)
+    },
+  },
   mounted() {
     // As soon as the <img> element triggers
     // the `load` event, the loading state is
     // set to `false`, which removes the apsect
     // ratio we've applied earlier.
-    const setLoadingState = () => {
-      this.loading = false
-    }
-    this.$el.addEventListener('load', setLoadingState)
+    // const setLoadingState = () => {
+    //   this.$emit('load', false)
+    // }
+    this.$el.addEventListener('load', this.setLoadingState)
+
     // We remove the event listener as soon as
     // the component is destroyed to prevent
     // potential memory leaks.
     this.$once('hook:destroyed', () => {
-      this.$el.removeEventListener('load', setLoadingState)
+      this.$el.removeEventListener('load', this.setLoadingState)
     })
 
     // We initialize Lozad.js on the root
