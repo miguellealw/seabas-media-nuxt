@@ -13,10 +13,12 @@ backend:
 media_library:
   name: cloudinary
   output_filename_only: false
-  # default_transformations:
-  #   - - fetch_format: auto
-  #       width: 200
-  #       quality: low
+  default_transformations:
+    - - fetch_format: auto
+        width: 300
+        quality: low
+        crop: fill
+        effect: grayscalew
   config:
     multiple: true
     cloud_name: seabas-media
@@ -129,21 +131,4 @@ collections:
         widget: 'list'
         required: false
         summary: '{{fields.image}}'
-        field:
-          {
-            label: 'Image',
-            name: 'image',
-            widget: 'image',
-            media_library:
-              {
-                config:
-                  {
-                    default_transformations
-                      - - fetch_format: auto
-                          width: 300
-                          quality: low
-                          crop: fill
-                          effect: grayscale
-                  },
-              },
-          }
+        field: { label: 'Image', name: 'image', widget: 'image' }
