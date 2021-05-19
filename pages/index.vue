@@ -7,7 +7,7 @@
     <home-gallery />
 
     <!-- About Me -->
-    <home-about-me />
+    <home-about-me :text="text" :image="image" />
 
     <!-- Contact Me -->
     <home-contact-me />
@@ -22,10 +22,25 @@ import HomeGallery from '/components/home/HomeGallery.vue'
 import HomeContactMe from '/components/home/HomeContactMe.vue'
 import HomeAboutMe from '/components/home/HomeAboutMe.vue'
 import Footer from '/components/global/Footer'
+let aboutMe, imageLink
 
 export default {
   name: 'HomePage',
   components: { HomeLanding, HomeGallery, HomeContactMe, HomeAboutMe, Footer },
+  async asyncData({ $content, params, error }) {
+    try {
+      aboutMe = await $content('home').fetch()
+
+      imageLink = `https://res.cloudinary.com/seabas-media/image/upload/v1621300807/gallery/About Me/${aboutMe[0].aboutmeimage[0]}`
+
+      return {
+        text: aboutMe[0].aboutmetext,
+        image: imageLink,
+      }
+    } catch (e) {
+      error({ Message: 'Gallery not found' })
+    }
+  },
 }
 </script>
 
