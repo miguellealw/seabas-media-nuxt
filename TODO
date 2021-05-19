@@ -1,24 +1,41 @@
 Fix Issues:
 ☐ fix favicon on mobile
-☐ fix images not being previewed properly in CMS
+
+✔ fix images not being previewed properly in CMS @done(21-05-19 04:02)
+  - CONSIDER: remove output_filename_only and parse url for file name then pass into data links link generator as normal
   - https://www.netlifycms.org/docs/deploy-preview-links/
+
 ☐ make skill tree dynamic with galleries
+
 ☐ fix navigation in gallery. make dynamic based on galleries added from CMS
+
 ☐ allow editing on home page gallery through CMS
-☐ allow editing on home page about me through CMS
+
+✔ allow editing on home page about me through CMS @done(21-05-19 00:15)
+
 ☐ fix identiy emails redirecting to root page
   - https://github.com/netlify/netlify-cms/issues/5109
   - https://answers.netlify.com/t/common-issue-netlify-cms-git-gateway-email-not-confirmed/10690
-☐ title of website should come from content/site/info.json
-☐ add skeleton loading in gallery w/ vue-content-placeholder
 
+☐ title of website should come from content/site/info.json
+
+☐ allow for uploading images in batches (consider flattening images array)
+
+✔ add skeleton loading in gallery w/ vue-content-placeholder @done(21-05-18 23:37)
   - https://github.com/michalsnik/vue-content-placeholders
   - https://learnvue.co/2020/04/vue-skeleton-loading-screen-using-suspense-components-daily-vue-4/
 
 ☐ make changing cloudinary easier for dev and production
   ☐ add env vars
   - https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html
+  - https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786
 
+✔ allow for reordering of galleries @done(21-05-17 23:45)
+  - consider adding a field w/ a number that maps to position in gallery
+
+✔ fix column height in gallery @done(21-05-17 23:45)
+  - all picture should have the same col height
 
 Future Todos:
-☐ allow for adding videos and graphic design
+☐ allow for adding videos and graphic design and image previews 
+☐ allow zooming in to picture in lightbox
