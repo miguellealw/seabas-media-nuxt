@@ -14,4 +14,8 @@ images:
   - - /IMG_6379_zglt7b.jpg
   - - /IMG_4408_lcbpvt.jpg
   - - /IMG_4401_gaexhr.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1621234754/gallery/Portraits/IMG_4266_z4cgpd.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1621230640/gallery/Portraits/Copy_of_IMG_3176_weudyj.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1621230640/gallery/Portraits/Copy_of_IMG_3049-Edit_qavo0e.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1621227514/gallery/Portraits/Copy_of_IMG_6858_oys6md.jpg
 ---
