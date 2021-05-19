@@ -19,4 +19,5 @@ images:
   - - /IMG_2673_qezwz7.jpg
   - - /IMG_5240_n48dxw.jpg
   - - /IMG_5622_vwqyea.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1621234776/gallery/Portraits/IMG_2673_qezwz7.jpg
 ---
