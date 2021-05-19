@@ -13,12 +13,6 @@ backend:
 media_library:
   name: cloudinary
   output_filename_only: false
-  # default_transformations:
-  #   - - fetch_format: auto
-  #       width: 300
-  #       quality: low
-  #       crop: fill
-  #       effect: grayscalew
   config:
     multiple: true
     cloud_name: seabas-media
@@ -100,12 +94,8 @@ collections:
         file: 'content/home/aboutme.md'
         format: 'markdown'
         fields:
-          - label: 'About Me Text'
-            name: 'aboutmetext'
-            widget: 'text'
-          - label: 'About Me Image'
-            name: 'aboutmeimage'
-            widget: 'image'
+          - { label: 'About Me Text', name: 'aboutmetext', widget: 'text' }
+          - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
 
   - label: 'Galleries'
     label_singular: 'Gallery'
