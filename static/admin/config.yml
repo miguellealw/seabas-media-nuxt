@@ -106,7 +106,12 @@ collections:
     sortable_fields: ['position']
     fields:
       - { label: 'Gallery Title', name: 'title', widget: 'string' }
-      - { label: 'Position', name: 'position', widget: 'number' }
+      - {
+          label: 'Position',
+          name: 'position',
+          widget: 'number',
+          hint: 'order in which gallery will be displayed in the site',
+        }
       - {
           label: 'Images',
           name: 'images',
