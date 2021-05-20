@@ -54,7 +54,7 @@ export default {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
+        href: 'favicon.ico'
       }
     ], // ? Imports the font 'Inter', can be optimized by the netlify plugin 'Subfont' by uncommenting it in `netlify.toml`
     noscript: [
