@@ -98,15 +98,20 @@ collections:
     fields:
       - label: 'Home Gallery'
         name: 'homegallery'
-        field:
-          {
-            label: 'Home Gallery Images',
-            name: 'homegalleryimages',
-            widget: 'list',
-            max: 4,
-            min: 4,
-            field: { label: 'Image', name: 'image', widget: 'image' },
-          }
+        files:
+          label: 'Home Gallery'
+          name: 'homegallery'
+          file: 'content/home/homegallery.md'
+          format: 'markdown'
+          field:
+            {
+              label: 'Home Gallery Images',
+              name: 'homegalleryimages',
+              widget: 'list',
+              max: 4,
+              min: 4,
+              field: { label: 'Image', name: 'image', widget: 'image' },
+            }
 
   - label: 'Galleries'
     label_singular: 'Gallery'
