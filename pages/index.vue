@@ -31,10 +31,12 @@ export default {
     try {
       homeData = await $content('home').fetch()
 
+      // console.log('HOME DATA', homeData)
+
       return {
         homeGalleryImages: homeData[0].homegalleryimages.flat(),
         aboutMeText: homeData[1].aboutmetext,
-        aboutMeImage: homeData[1].aboutmeimage,
+        aboutMeImage: homeData[1].aboutmeimage[0],
       }
     } catch (e) {
       error({ Message: 'Gallery not found' })
