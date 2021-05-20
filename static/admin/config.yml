@@ -97,14 +97,14 @@ collections:
           - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
     fields:
       - label: 'Home Gallery'
-        name: 'homeGallery'
+        name: 'homegallery'
         field:
           {
             label: 'Home Gallery Images',
-            name: 'homeGalleryImages',
+            name: 'homegalleryimages',
             widget: 'list',
-            max: '4',
-            min: '4',
+            max: 4,
+            min: 4,
             field: { label: 'Image', name: 'image', widget: 'image' },
           }
 
