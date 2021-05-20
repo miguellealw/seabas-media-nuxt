@@ -7,7 +7,7 @@ Fix Issues:
 
 ☐ make skill tree dynamic with galleries
 
-☐ fix navigation in gallery. make dynamic based on galleries added from CMS
+✔ fix navigation in gallery. make dynamic based on galleries added from CMS @done(21-05-20 01:10)
 
 ☐ allow editing on home page gallery through CMS
 
@@ -19,7 +19,7 @@ Fix Issues:
 
 ☐ title of website should come from content/site/info.json
 
-☐ allow for uploading images in batches (consider flattening images array)
+✔ allow for uploading images in batches (consider flattening images array) @done(21-05-20 01:10)
 
 ✔ add skeleton loading in gallery w/ vue-content-placeholder @done(21-05-18 23:37)
   - https://github.com/michalsnik/vue-content-placeholders
@@ -35,6 +35,11 @@ Fix Issues:
 
 ✔ fix column height in gallery @done(21-05-17 23:45)
   - all picture should have the same col height
+
+☐ better performance in gallery
+  ☐ image is fetched twice (once when it loads and another when lightbox is opened)
+  ✔ lower size of images @done(21-05-20 01:11)
+  ☐ rednering of images is low
 
 Future Todos:
 ☐ allow for adding videos and graphic design and image previews 
