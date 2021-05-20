@@ -1,5 +1,5 @@
 <template>
-  <div class="remove-smooth-scroll">
+  <div>
     <gallery-header :galleries="galleries" />
     <main class="w-3/4 mx-auto my-4 max-w-screen-lg mt-20 relative">
       <router-link to="/" class="uppercase block mb-5 text-xs text-gray-500">Home Page</router-link>
