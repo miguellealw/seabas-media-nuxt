@@ -109,7 +109,7 @@ collections:
               min: 4,
               # allow_add: false,
               minimize_collapsed: false,
-              field: { label: 'Image', name: 'image', widget: 'image' },
+              field: { label: 'Image', name: 'image', allow_multiple: false, widget: 'image' },
             }
 
   - label: 'Galleries'
