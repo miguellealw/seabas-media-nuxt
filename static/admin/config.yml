@@ -100,7 +100,14 @@ collections:
         file: 'content/home/homegallery.md'
         format: 'markdown'
         fields:
-          - { label: 'Image', name: 'image', widget: 'image' }
+          - {
+              label: 'Image',
+              name: 'image',
+              widget: 'image',
+              max: 4,
+              min: 4,
+              hint: 'must upload 4 pictures to keep layout of home page gallery',
+            }
           # - {
           #     label: 'Home Gallery Images',
           #     name: 'homegalleryimages',
