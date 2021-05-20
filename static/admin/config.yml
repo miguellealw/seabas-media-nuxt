@@ -95,16 +95,16 @@ collections:
         fields:
           - { label: 'About Me Text', name: 'aboutmetext', widget: 'text' }
           - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
-    fields: 
+    fields:
       - label: 'Home Gallery'
         name: 'homeGallery'
-        field: 
+        field:
           - label: 'Home Gallery Images'
             name: 'homeGalleryImages'
             widget: 'list'
             max: '4'
             min: '4'
-          field: { label: 'Image', name: 'image', widget: 'image' }
+            field: { label: 'Image', name: 'image', widget: 'image' }
 
   - label: 'Galleries'
     label_singular: 'Gallery'
