@@ -19,7 +19,7 @@
           class="h-full w-full object-cover object-center"
           :lozad-lazy-src="image"
           :width="500"
-          :height="500"
+          :height="800"
           :loading="isLoading"
           @image-loaded="updateloading"
           alt="Portrait Picture"

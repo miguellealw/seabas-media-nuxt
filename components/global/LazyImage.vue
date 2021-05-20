@@ -104,7 +104,8 @@ export default {
     // element of our component.
     const observer = lozad(this.$el, {
       rootMargin: '10px 0px',
-      threshold: 0.1,
+      threshold: 0.001,
+      // enableAutoReload: true,
     })
     observer.observe()
   },
