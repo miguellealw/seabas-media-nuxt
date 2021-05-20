@@ -95,7 +95,6 @@ collections:
         fields:
           - { label: 'About Me Text', name: 'aboutmetext', widget: 'text' }
           - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
-    fields:
       - label: 'Home Gallery'
         name: 'homegallery'
         files:
