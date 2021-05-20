@@ -13,7 +13,7 @@
 
       <h3 class="font-bold uppercase tracking-widest md:text-white text-sm my-10 md:my-2 self-start">My Work</h3>
       <ul class="h-full grid grid-cols-2 grid-rows-myWorkGallery md:grid-rows-2 gap-2 lg:gap-6">
-        <li v-for="image in images" :key="image" class="overflow-hidden">
+        <li v-for="(image, index) in gallery" :key="index" class="overflow-hidden">
           <img
             :src="image"
             class="object-cover object-center w-full h-full transform hover:scale-110 transition-transform duration-1000 ease-in-out"
@@ -29,11 +29,6 @@
           style="border: 2px solid black"
         >
           All My Work
-          <!-- <a
-          href="/my-work"
-          class="uppercase px-10 py-3 text-xs block hover:bg-black hover:text-white"
-          >All My Work</a
-        > -->
         </button>
       </router-link>
     </div>
@@ -103,15 +98,10 @@
 
 <script>
 export default {
-  data: () => {
-    return {
-      images: [
-        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685473/sebas-portfolio-vue/images/portraits/01.jpg',
-        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685475/sebas-portfolio-vue/images/portraits/11.jpg',
-        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685489/sebas-portfolio-vue/images/urban/02.jpg',
-        'https://res.cloudinary.com/miguelleal/image/upload/q_auto/v1601685474/sebas-portfolio-vue/images/portraits/04.jpg',
-      ],
-    }
+  props: {
+    gallery: {
+      type: Array,
+    },
   },
 }
 </script>

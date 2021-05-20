@@ -4,10 +4,10 @@
     <home-landing />
 
     <!-- My Work - Gallery -->
-    <home-gallery />
+    <home-gallery :gallery="homeGalleryImages" />
 
     <!-- About Me -->
-    <home-about-me :text="text" :image="image" />
+    <home-about-me :text="aboutMeText" :image="aboutMeImage" />
 
     <!-- Contact Me -->
     <home-contact-me />
@@ -22,18 +22,19 @@ import HomeGallery from '/components/home/HomeGallery.vue'
 import HomeContactMe from '/components/home/HomeContactMe.vue'
 import HomeAboutMe from '/components/home/HomeAboutMe.vue'
 import Footer from '/components/global/Footer'
-let aboutMe, imageLink
+let homeData
 
 export default {
   name: 'HomePage',
   components: { HomeLanding, HomeGallery, HomeContactMe, HomeAboutMe, Footer },
   async asyncData({ $content, params, error }) {
     try {
-      aboutMe = await $content('home').fetch()
+      homeData = await $content('home').fetch()
 
       return {
-        text: aboutMe[0].aboutmetext,
-        image: aboutMe[0].aboutmeimage,
+        homeGalleryImages: homeData[0].homegalleryimages.flat(),
+        aboutMeText: homeData[1].aboutmetext,
+        aboutMeImage: homeData[1].aboutmeimage,
       }
     } catch (e) {
       error({ Message: 'Gallery not found' })
