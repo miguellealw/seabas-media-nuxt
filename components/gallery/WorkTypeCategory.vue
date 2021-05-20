@@ -1,6 +1,6 @@
 <template>
   <section :id="sectionId" class="my-10">
-    <h4 class="heading-xs-uppercase text-gray-500">{{ category }}</h4>
+    <h2 class="heading-xs-uppercase text-gray-500">{{ category }}</h2>
     <ul class="w-full mt-3 mx-auto grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-3">
       <li v-if="loading">
         <content-placeholders>
@@ -22,7 +22,7 @@
           :height="800"
           :loading="isLoading"
           @image-loaded="updateloading"
-          alt="Portrait Picture"
+          :alt="galleryTitle + ' Picture'"
           :index="index"
         />
         <!-- <img
@@ -70,6 +70,9 @@ export default {
       type: Function,
     },
     galleryPath: {
+      type: String,
+    },
+    galleryTitle: {
       type: String,
     },
     sectionId: {

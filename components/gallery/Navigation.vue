@@ -30,22 +30,19 @@
         <li class="my-2 text-gray-500" @click="handleOpenNav">
           <a href="#photography" class="tracking-widest hover:text-black">Photography</a>
           <ul>
-            <li class="my-2 ml-4 text-gray-500 hover:text-black">
-              <a href="#photography-portraits" class="tracking-widest"> - Portraits</a>
-            </li>
-            <li class="my-2 ml-4 text-gray-500 hover:text-black">
-              <a href="#photography-urban" class="tracking-widest">- Urban</a>
+            <li v-for="(gallery, index) in galleries" :key="index" class="my-2 ml-4 text-gray-500 hover:text-black">
+              <a :href="'#photography-' + gallery.slug" class="tracking-widest"> - {{ gallery.title }}</a>
             </li>
           </ul>
         </li>
 
-        <li class="my-2 text-gray-500 hover:text-black" @click="handleOpenNav">
+        <!-- <li class="my-2 text-gray-500 hover:text-black" @click="handleOpenNav">
           <a href="#videos">Videos</a>
         </li>
 
         <li class="mt-2 text-gray-500 hover:text-black" @click="handleOpenNav">
           <a href="#graphic-design">Graphic Design</a>
-        </li>
+        </li> -->
 
         <hr class="my-5" />
 
@@ -75,6 +72,11 @@ export default {
       this.isNavOpen = !this.isNavOpen
 
       this.navDisplayStyle = this.isNavOpen ? 'flex' : 'none'
+    },
+  },
+  props: {
+    galleries: {
+      type: Array,
     },
   },
 }

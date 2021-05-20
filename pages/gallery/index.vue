@@ -1,22 +1,22 @@
 <template>
   <div class="remove-smooth-scroll">
-    <gallery-header />
+    <gallery-header :galleries="galleries" />
     <main class="w-3/4 mx-auto my-4 max-w-screen-lg mt-20 relative">
       <router-link to="/" class="uppercase block mb-5 text-xs text-gray-500">Home Page</router-link>
 
       <!-- Photography Section -->
       <div id="photography">
-        <h3 class="heading-xs-uppercase">Photography</h3>
+        <h1 class="heading-xs-uppercase">Photography</h1>
         <hr class="w-10 my-3" />
 
-        <!-- TODO: dynamic sectionId -->
         <div v-for="(gallery, index) in galleries" :key="index">
           <work-type-category
             :category="gallery.title"
             :images="images[gallery.slug]"
             :galleryPath="gallery.path"
+            :galleryTitle="gallery.title"
             :openGallery="openGallery"
-            sectionId="photography-portraits"
+            :sectionId="'photography-' + gallery.slug"
           />
         </div>
       </div>
@@ -58,7 +58,7 @@ export default {
       // sort galleries based on position
       galleries.sort((g1, g2) => g1.position - g2.position)
 
-      // for WorkTypeCategory
+      // for images array will contain src links only for WorkTypeCategory
       images = galleries.reduce((acc, gallery) => {
         imageLinks = gallery.images.flat()
 
@@ -81,6 +81,8 @@ export default {
     } catch (e) {
       error({ Message: 'Gallery not found' })
     }
+
+    console.log('GALL', galleries)
 
     return { galleries, media, images }
   },
