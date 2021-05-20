@@ -108,7 +108,7 @@ collections:
               max: 4,
               min: 4,
               # allow_add: false,
-              minimize_collapsed: false,
+              collapsed: false,
               field: { label: 'Image', name: 'image', allow_multiple: false, widget: 'image' },
             }
 
