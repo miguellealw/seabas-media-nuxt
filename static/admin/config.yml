@@ -97,13 +97,10 @@ collections:
           - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
       - label: 'Home Gallery'
         name: 'homegallery'
-        files:
-          label: 'Home Gallery'
-          name: 'homegallery'
-          file: 'content/home/homegallery.md'
-          format: 'markdown'
-          field:
-            {
+        file: 'content/home/homegallery.md'
+        format: 'markdown'
+        fields:
+          - {
               label: 'Home Gallery Images',
               name: 'homegalleryimages',
               widget: 'list',
