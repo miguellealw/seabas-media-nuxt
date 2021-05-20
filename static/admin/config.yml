@@ -107,9 +107,16 @@ collections:
               hint: 'must upload 4 pictures to keep layout of home page gallery',
               max: 4,
               min: 4,
-              allow_add: false,
+              # allow_add: false,
               collapsed: false,
-              field: { label: 'Image', name: 'image', widget: 'image' },
+              field:
+                {
+                  label: 'Image',
+                  name: 'image',
+                  allow_multiple: false,
+                  widget: 'image',
+                  media_library: { config: { multiple: false } },
+                },
             }
 
   - label: 'Galleries'
