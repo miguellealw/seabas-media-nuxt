@@ -87,7 +87,6 @@ collections:
 
   - label: 'Home Page'
     name: 'home'
-    # folder: 'content/home'
     files:
       - label: 'About Me'
         name: 'aboutme'
@@ -96,6 +95,16 @@ collections:
         fields:
           - { label: 'About Me Text', name: 'aboutmetext', widget: 'text' }
           - { label: 'About Me Image', name: 'aboutmeimage', widget: 'image' }
+    fields: 
+      - label: 'Home Gallery'
+        name: 'homeGallery'
+        field: 
+          - label: 'Home Gallery Images'
+            name: 'homeGalleryImages'
+            widget: 'list'
+            max: '4'
+            min: '4'
+          field: { label: 'Image', name: 'image', widget: 'image' }
 
   - label: 'Galleries'
     label_singular: 'Gallery'
@@ -124,4 +133,5 @@ collections:
         widget: 'list'
         # required: false
         summary: '{{fields.image}}'
+        collapsed: false
         field: { label: 'Image', name: 'image', widget: 'image' }
