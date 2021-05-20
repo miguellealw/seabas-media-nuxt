@@ -22,7 +22,7 @@ import HomeGallery from '/components/home/HomeGallery.vue'
 import HomeContactMe from '/components/home/HomeContactMe.vue'
 import HomeAboutMe from '/components/home/HomeAboutMe.vue'
 import Footer from '/components/global/Footer'
-let homeData
+let homeData, aboutMe, homeGallery
 
 export default {
   name: 'HomePage',
@@ -31,12 +31,14 @@ export default {
     try {
       homeData = await $content('home').fetch()
 
-      // console.log('HOME DATA', homeData)
+      // Get data from homepage
+      aboutMe = homeData.find((el) => el.slug === 'aboutme')
+      homeGallery = homeData.find((el) => el.slug === 'homegallery')
 
       return {
-        homeGalleryImages: homeData[0].homegalleryimages.flat(),
-        aboutMeText: homeData[1].aboutmetext,
-        aboutMeImage: homeData[1].aboutmeimage[0],
+        homeGalleryImages: homeGallery.homegalleryimages.flat(),
+        aboutMeText: aboutMe.aboutmetext,
+        aboutMeImage: aboutMe.aboutmeimage[0],
       }
     } catch (e) {
       error({ Message: 'Gallery not found' })
