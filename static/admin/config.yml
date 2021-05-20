@@ -99,12 +99,14 @@ collections:
       - label: 'Home Gallery'
         name: 'homeGallery'
         field:
-          - label: 'Home Gallery Images'
-            name: 'homeGalleryImages'
-            widget: 'list'
-            max: '4'
-            min: '4'
-            field: { label: 'Image', name: 'image', widget: 'image' }
+          {
+            label: 'Home Gallery Images',
+            name: 'homeGalleryImages',
+            widget: 'list',
+            max: '4',
+            min: '4',
+            field: { label: 'Image', name: 'image', widget: 'image' },
+          }
 
   - label: 'Galleries'
     label_singular: 'Gallery'
