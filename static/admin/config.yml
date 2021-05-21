@@ -44,48 +44,6 @@ collections:
               widget: string,
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
-          # - { label: Site Email, name: siteemail, widget: string, required: false }
-  # - name: 'blog'
-  #   label: 'Blog'
-  #   folder: 'content/blog'
-  #   create: true
-  #   format: 'frontmatter'
-  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-  #   # editor:
-  #   #   preview: true
-  #   fields:
-  #     - { label: 'Title', name: 'title', widget: 'string', required: true }
-  #     - { label: 'Description', name: 'description', widget: 'string', required: false }
-  #     - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-  # - name: 'projects'
-  #   label: 'Projects'
-  #   label_singular: 'Project'
-  #   folder: 'content/projects'
-  #   create: true
-  #   format: 'frontmatter'
-  #   slug: '{{slug}}'
-  #   preview_path: 'projects/{{slug}}'
-  #   fields:
-  #     - {
-  #         label: 'Project Category',
-  #         name: 'category',
-  #         widget: 'select',
-  #         default: 'animals',
-  #         options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
-  #       }
-  #     - { label: 'Title', name: 'title', widget: 'string', required: true }
-  #     - { label: 'Description', name: 'description', widget: 'string', required: false }
-  #     - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
-  #     - { label: 'Content', name: 'body', widget: 'markdown', required: false }
-  #     - {
-  #         label: 'Gallery',
-  #         name: 'gallery',
-  #         widget: 'list',
-  #         required: false,
-  #         summary: '{{fields.image}}',
-  #         field: { label: 'Image', name: 'image', widget: 'image' },
-  #       }
-
   - label: 'Home Page'
     name: 'home'
     files:
@@ -140,7 +98,6 @@ collections:
         name: 'position'
         widget: 'number'
         hint: 'order in which gallery will be displayed in the site'
-
       - label: 'Images'
         name: 'images'
         widget: 'list'
@@ -148,3 +105,7 @@ collections:
         summary: '{{fields.image}}'
         collapsed: false
         field: { label: 'Image', name: 'image', widget: 'image' }
+      - label: 'Section'
+        name: 'section'
+        widget: 'select'
+        option: ['photography', 'video', 'graphic design']
