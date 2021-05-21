@@ -1,11 +1,8 @@
 ---
-aboutmetext: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-  repudiandae eum tenetur nemo quibusdam dignissimos pariatur iusto. Commodi
-  magni quibusdam, repellat soluta dolorum eaque inventore similique
-  exercitationem, nisi doloribus voluptatem. Nam minus voluptate illum error,
-  distinctio in. Sint perferendis neque hic alias incidunt, quibusdam maiores
-  doloremque veritatis, corporis quidem voluptates fugit consequatur pariatur
-  nulla repudiandae autem. Deserunt et aut repellendus! Fuga, quod minima.
+aboutmetext: My name is Sebastian Leal, I’m a 20 year old student studying
+  cinematic arts at the University of Texas at Arlington. I enjoy anything
+  visual such as photography, videos, and graphics. I’m here to take your
+  events, brands, anniversaries, anything, and make it more memorable.
 aboutmeimage:
   - https://res.cloudinary.com/seabas-media/image/upload/v1621400791/gallery/About%20Me/profile-pic_brykz9.jpg
 ---
