@@ -1,5 +1,6 @@
 ---
 title: Creative
+section: Photography
 position: 2
 images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1621630581/gallery/Creative/IMG_6944_u95gds.jpg
