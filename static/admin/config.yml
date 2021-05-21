@@ -108,4 +108,4 @@ collections:
       - label: 'Section'
         name: 'section'
         widget: 'select'
-        option: ['photography', 'video', 'graphic design']
+        options: ['photography', 'video', 'graphic design']
