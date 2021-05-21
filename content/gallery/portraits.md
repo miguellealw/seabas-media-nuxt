@@ -22,4 +22,5 @@ images:
     - https://res.cloudinary.com/seabas-media/image/upload/v1621224991/gallery/Portraits/IMG_7280_i33kgm.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621218000/gallery/Portraits/DSC00029_icr203.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621230640/gallery/Portraits/Copy_of_IMG_3176_weudyj.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1621630188/gallery/Portraits/IMG_6082_wx0nzv.jpg
 ---
