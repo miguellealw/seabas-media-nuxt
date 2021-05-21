@@ -94,6 +94,10 @@ collections:
       - label: 'Gallery Title'
         name: 'title'
         widget: 'string'
+      - label: 'Section'
+        name: 'section'
+        widget: 'select'
+        options: ['Photography', 'Video', 'Graphic Design']
       - label: 'Position'
         name: 'position'
         widget: 'number'
@@ -105,7 +109,3 @@ collections:
         summary: '{{fields.image}}'
         collapsed: false
         field: { label: 'Image', name: 'image', widget: 'image' }
-      - label: 'Section'
-        name: 'section'
-        widget: 'select'
-        options: ['photography', 'video', 'graphic design']
