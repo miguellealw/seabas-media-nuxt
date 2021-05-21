@@ -1,5 +1,6 @@
 ---
 title: Portraits
+section: Photography
 position: 1
 images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1621300787/gallery/Portraits/IMG_7277_pcs37l.jpg
