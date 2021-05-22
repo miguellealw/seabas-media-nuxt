@@ -26,7 +26,7 @@ export const createLink = (path, isImage = true) => {
     return {
       src: `<iframe title="vimeo-player" src="${createVideoLink(
         path
-      )}" width="640" height="360" frameborder="0" allowfullscreen></iframe>`
+      )}" width="640" height="360" frameborder="0" allowfullscreen style="width:100%; object-fit: cover;"></iframe>`
     }
   }
 
