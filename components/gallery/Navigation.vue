@@ -27,10 +27,21 @@
         close
       </span>
       <ul>
-        <li class="my-2 text-gray-500" @click="handleOpenNav">
-          <a href="#photography" class="tracking-widest hover:text-black">Photography</a>
+        <li
+          class="my-2 text-gray-500"
+          @click="handleOpenNav"
+          v-for="(section, sectionIndex) in sections"
+          :key="sectionIndex"
+        >
+          <!-- <a href="#photography" class="tracking-widest hover:text-black">Photography</a> -->
+          <!-- TODO: maek href dynamic -->
+          <a :href="'#' + section.slug" class="tracking-widest hover:text-black">{{ section.name }}</a>
           <ul>
-            <li v-for="(gallery, index) in galleries" :key="index" class="my-2 ml-4 text-gray-500 hover:text-black">
+            <li
+              v-for="(gallery, index) in section.galleries"
+              :key="index"
+              class="my-2 ml-4 text-gray-500 hover:text-black"
+            >
               <a :href="'#photography-' + gallery.slug" class="tracking-widest"> - {{ gallery.title }}</a>
             </li>
           </ul>
@@ -76,6 +87,9 @@ export default {
   },
   props: {
     galleries: {
+      type: Array,
+    },
+    sections: {
       type: Array,
     },
   },
