@@ -96,8 +96,7 @@ collections:
     required: false
     sortable_fields: ['position']
     view_groups:
-      - label: Section
-        field: section
+      - field: section
         pattern: 'Photography|Video|Graphic Design'
     fields:
       - label: 'Gallery Title'
