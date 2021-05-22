@@ -10,9 +10,9 @@ images:
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649270/gallery/Logos/Untitled-1_xgyql8.png
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649270/gallery/Logos/Untitled-6_f8b7te.png
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649270/gallery/Logos/Untitled-3_vjasdo.png
+    - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/lawncare-page-001_mots95.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/lawncare_black-page-001_aqu22f.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/untitled_-_6_xtbfzy.png
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/Triple_A_z1stut.jpg
-    - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/lawncare-page-001_mots95.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/los_magueyitos_eydmve.png
 ---
