@@ -110,7 +110,7 @@ collections:
       - label: 'Images'
         name: 'images'
         widget: 'list'
-        # required: false
+        required: true
         summary: '{{fields.image}}'
         collapsed: false
         field: { label: 'Image', name: 'image', widget: 'image' }
