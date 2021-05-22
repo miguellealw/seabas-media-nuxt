@@ -85,9 +85,9 @@ collections:
     label_singular: 'Gallery'
     name: 'gallery'
     title: 'gallery'
-    slug: '{{ slug }}'
+    slug: '{{slug}}'
     create: true
-    identifier_field: name
+    # identifier_field: name
     # preview_path: '/gallery/{{filename}}.{{extension}}'
     preview_path: '/gallery'
     editor:
