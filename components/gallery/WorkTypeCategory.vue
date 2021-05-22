@@ -14,32 +14,9 @@
         </content-placeholders>
       </li>
 
-      <li
-        v-else-if="workType === 'Videos'"
-        class="bg-gray-300 cursor-pointer"
-        v-for="(image, index) of images"
-        :key="index"
-        v-html="image"
-      >
-        <!-- <template v-html="image"> -->
-        <!-- <video controls="controls"> -->
-        <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.webm" type="video/webm" /> -->
-        <!-- <source :src="image" type="video/webm" /> -->
-        <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.mp4" type="video/mp4"/>
-            <source src="https://res.cloudinary.com/demo/video/upload/dog.ogv" type="video/ogg"/> -->
-        <!-- </video> -->
+      <li v-else-if="workType === 'Videos'" v-for="(image, index) of images" :key="index" v-html="image"></li>
 
-        <!-- {{  image  }} -->
-        <!-- </template> -->
-      </li>
-
-      <li
-        v-else
-        @click="openGallery(image)"
-        class="bg-gray-300 cursor-pointer"
-        v-for="(image, index) of images"
-        :key="index"
-      >
+      <li v-else @click="openGallery(image)" class="cursor-pointer" v-for="(image, index) of images" :key="index">
         <template>
           <LazyImage
             class="h-full w-full object-cover object-center"
@@ -114,3 +91,6 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+</style>
