@@ -4,7 +4,7 @@
     <ul
       :class="
         'w-full mt-3 mx-auto grid' +
-        (workType === 'Video' ? ' grid-cols-1 md:grid-cols-2' : ' grid-cols-2 md:grid-cols-4') +
+        (workType === 'Videos' ? ' grid-cols-1 md:grid-cols-2' : ' grid-cols-2 md:grid-cols-4') +
         ' auto-rows-fr gap-3'
       "
     >
@@ -15,7 +15,7 @@
       </li>
 
       <li
-        v-else-if="workType === 'Video'"
+        v-else-if="workType === 'Videos'"
         class="bg-gray-300 cursor-pointer"
         v-for="(image, index) of images"
         :key="index"

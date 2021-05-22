@@ -1,23 +1,23 @@
 <template>
   <div>
-    <gallery-header :galleries="galleries" />
+    <gallery-header :sections="sections" :galleries="galleries" />
     <main class="w-3/4 mx-auto my-4 max-w-screen-lg mt-20 relative">
       <router-link to="/" class="uppercase block mb-5 text-xs text-gray-500">Home Page</router-link>
 
       <ul>
         <!-- TODO: slugify section name (section.section) for id -->
-        <!-- <li v-for="(section, sectionIndex) in sections" :key="sectionIndex" :id="section.section"> -->
-        <li v-for="(section, sectionIndex) in sections" :key="sectionIndex">
+        <li v-for="(section, sectionIndex) in sections" :key="sectionIndex" :id="section.slug">
+          <!-- <li v-for="(section, sectionIndex) in sections" :key="sectionIndex"> -->
           <!-- <h1 class="heading-xs-uppercase">Photography</h1> -->
           <hr class="w-10 my-3" />
-          <h1 class="heading-xs-uppercase">{{ section[0].section }}</h1>
+          <h1 class="heading-xs-uppercase">{{ section.name }}</h1>
           <hr class="w-10 my-3" />
 
-          <div v-for="(gallery, index) in section" :key="index">
+          <div v-for="(gallery, index) in section.galleries" :key="index">
             <work-type-category
               :category="gallery.title"
               :images="images[gallery.slug]"
-              :work-type="section[0].section"
+              :workType="section.name"
               :galleryPath="gallery.path"
               :galleryTitle="gallery.title"
               :openGallery="openGallery"
@@ -70,9 +70,21 @@ export default {
 
       // get galleries of each section
       sections = [
-        [...getSection(galleries, 'Photography').sort((g1, g2) => g1.position - g2.position)],
-        [...getSection(galleries, 'Video').sort((g1, g2) => g1.position - g2.position)],
-        [...getSection(galleries, 'Graphic Design').sort((g1, g2) => g1.position - g2.position)],
+        {
+          name: 'Photography',
+          slug: 'photography',
+          galleries: [...getSection(galleries, 'Photography').sort((g1, g2) => g1.position - g2.position)],
+        },
+        {
+          name: 'Videos',
+          slug: 'videos',
+          galleries: [...getSection(galleries, 'Video').sort((g1, g2) => g1.position - g2.position)],
+        },
+        {
+          name: 'Graphic Design',
+          slug: 'graphic_design',
+          galleries: [...getSection(galleries, 'Graphic Design').sort((g1, g2) => g1.position - g2.position)],
+        },
       ]
 
       // sort galleries based on position
