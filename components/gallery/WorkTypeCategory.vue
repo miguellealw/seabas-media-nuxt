@@ -15,16 +15,26 @@
         v-for="(image, index) of images"
         :key="index"
       >
-        <LazyImage
-          class="h-full w-full object-cover object-center"
-          :lozad-lazy-src="image"
-          :width="500"
-          :height="800"
-          :loading="isLoading"
-          @image-loaded="updateloading"
-          :alt="galleryTitle + ' Picture'"
-          :index="index"
-        />
+        <template v-if="workType === 'Video'">
+          <video controls="controls">
+            <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.webm" type="video/webm" /> -->
+            <source :src="image" type="video/webm" />
+            <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.mp4" type="video/mp4"/>
+            <source src="https://res.cloudinary.com/demo/video/upload/dog.ogv" type="video/ogg"/> -->
+          </video>
+        </template>
+        <template v-else>
+          <LazyImage
+            class="h-full w-full object-cover object-center"
+            :lozad-lazy-src="image"
+            :width="500"
+            :height="800"
+            :loading="isLoading"
+            @image-loaded="updateloading"
+            :alt="galleryTitle + ' Picture'"
+            :index="index"
+          />
+        </template>
         <!-- <img
           class="h-full w-full object-cover object-center"
           v-lazy="image"
@@ -80,6 +90,9 @@ export default {
     },
     loading: {
       type: Boolean,
+    },
+    workType: {
+      type: String,
     },
   },
 }
