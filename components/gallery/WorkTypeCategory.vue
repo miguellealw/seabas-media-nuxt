@@ -1,11 +1,33 @@
 <template>
   <section :id="sectionId" class="my-10">
     <h2 class="heading-xs-uppercase text-gray-500">{{ category }}</h2>
-    <ul class="w-full mt-3 mx-auto grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-3">
+    <ul
+      :class="
+        'w-full mt-3 mx-auto grid' +
+        (workType === 'Video' ? ' grid-cols-1 md:grid-cols-2' : ' grid-cols-2 md:grid-cols-4') +
+        ' auto-rows-fr gap-3'
+      "
+    >
       <li v-if="loading">
         <content-placeholders>
           <content-placeholders-img />
         </content-placeholders>
+      </li>
+
+      <li
+        v-else-if="workType === 'Video'"
+        class="bg-gray-300 cursor-pointer"
+        v-for="(image, index) of images"
+        :key="index"
+      >
+        <template>
+          <video controls="controls">
+            <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.webm" type="video/webm" /> -->
+            <source :src="image" type="video/webm" />
+            <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.mp4" type="video/mp4"/>
+            <source src="https://res.cloudinary.com/demo/video/upload/dog.ogv" type="video/ogg"/> -->
+          </video>
+        </template>
       </li>
 
       <li
@@ -15,15 +37,7 @@
         v-for="(image, index) of images"
         :key="index"
       >
-        <template v-if="workType === 'Video'">
-          <video controls="controls">
-            <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.webm" type="video/webm" /> -->
-            <source :src="image" type="video/webm" />
-            <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.mp4" type="video/mp4"/>
-            <source src="https://res.cloudinary.com/demo/video/upload/dog.ogv" type="video/ogg"/> -->
-          </video>
-        </template>
-        <template v-else>
+        <template>
           <LazyImage
             class="h-full w-full object-cover object-center"
             :lozad-lazy-src="image"

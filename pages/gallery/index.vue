@@ -105,16 +105,13 @@ export default {
       media = media.flat()
 
       // console.log('MEDIA', media)
-      console.log('IMAGES', images)
+      // console.log('IMAGES', images)
     } catch (e) {
       error({ Message: 'Gallery not found' })
     }
 
     // console.log('GALL', galleries)
-    console.log('SECTIONS', sections)
-    // console.log('phot sectoin', photographySection)
-    // console.log('video section', videoSection)
-    // console.log('graphic design section', graphicDesignSection)
+    // console.log('SECTIONS', sections)
 
     return { galleries, media, images, sections }
   },
