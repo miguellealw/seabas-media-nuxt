@@ -3,23 +3,13 @@ const cloudImageFormat = 'f_auto'
 const cloudName = 'seabas-media'
 const cloudVersion = 'v1621218000'
 
-//
-//
 function createVideoLink(link) {
+  console.log(link)
   const arr = link.split('/')
+  const vidNum = arr[arr.length - 1]
 
-  // add 'player' subdomain and '/video/' path
   // e.g. convert https://vimeo.com/466777132 to https://player.vimeo.com/video/466777132
-  // https: to https://
-  arr[0] = arr[0] + '//'
-  // add 'player.' subdomain
-  arr[1] = 'player.'
-  // copy video num
-  arr[4] = arr[3]
-  // add '/video/' path
-  arr[3] = '/video/'
-
-  const videoLink = arr.join('')
+  const videoLink = 'https://player.vimeo.com/video/' + vidNum
 
   return videoLink
 }
@@ -42,7 +32,6 @@ export const createLink = (path, isImage = true) => {
 
   return {
     thumb: `"https://res.cloudinary.com/${cloudName}/${mediaType}/upload/c_thumb,w_200,g_face/${cloudVersion}${path}", `,
-    // src: `https://res.cloudinary.com/${cloudName}/image/upload/h_800,w_300/${cloudImageQuality},${cloudImageFormat}/${cloudVersion}${imagePath}`
     src: `https://res.cloudinary.com/${cloudName}/${mediaType}/upload/w_0.5,h_0.5/${cloudImageQuality},${cloudImageFormat}/${cloudVersion}${path}`
   }
 }
