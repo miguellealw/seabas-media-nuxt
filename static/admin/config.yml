@@ -95,6 +95,10 @@ collections:
     folder: 'content/gallery'
     required: false
     sortable_fields: ['position']
+    view_groups:
+      - label: Section
+        field: section
+        pattern: 'Photography|Video|Graphic Design'
     fields:
       - label: 'Gallery Title'
         name: 'title'
@@ -111,6 +115,6 @@ collections:
         name: 'images'
         widget: 'list'
         required: true
-        summary: '{{fields.image}}'
+        summary: '{{'
         collapsed: false
         field: { label: 'Image', name: 'image', widget: 'image' }
