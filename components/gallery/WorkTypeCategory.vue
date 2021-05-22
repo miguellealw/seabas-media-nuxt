@@ -21,16 +21,16 @@
         :key="index"
         v-html="image"
       >
-        <template v-html="image">
-          <!-- <video controls="controls"> -->
-          <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.webm" type="video/webm" /> -->
-          <!-- <source :src="image" type="video/webm" /> -->
-          <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.mp4" type="video/mp4"/>
+        <!-- <template v-html="image"> -->
+        <!-- <video controls="controls"> -->
+        <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.webm" type="video/webm" /> -->
+        <!-- <source :src="image" type="video/webm" /> -->
+        <!-- <source src="https://res.cloudinary.com/demo/video/upload/dog.mp4" type="video/mp4"/>
             <source src="https://res.cloudinary.com/demo/video/upload/dog.ogv" type="video/ogg"/> -->
-          <!-- </video> -->
+        <!-- </video> -->
 
-          <!-- {{  image  }} -->
-        </template>
+        <!-- {{  image  }} -->
+        <!-- </template> -->
       </li>
 
       <li
