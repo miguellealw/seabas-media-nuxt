@@ -19,6 +19,7 @@ media_library:
 collections:
   - label: 'Site settings'
     name: 'site'
+    slug: '{{slug}}'
     files:
       - label: 'Info'
         name: 'info'
@@ -42,6 +43,7 @@ collections:
             }
   - label: 'Home Page'
     name: 'home'
+    slug: '{{slug}}'
     files:
       - label: 'About Me'
         name: 'aboutme'
@@ -90,14 +92,14 @@ collections:
       - label: 'Gallery Title'
         name: 'title'
         widget: 'string'
-      # - label: 'Section'
-      #   name: 'section'
-      #   widget: 'select'
-      #   options: ['Photography', 'Video', 'Graphic Design']
+      - label: 'Section'
+        name: 'section'
+        widget: 'select'
+        options: ['Photography', 'Video', 'Graphic Design']
       - label: 'Position'
         name: 'position'
         widget: 'number'
-        hint: 'order in which gallery will be displayed relative to section'
+        hint: 'Order in which gallery will be displayed relative to section'
       - label: 'Images'
         name: 'images'
         widget: 'list'
