@@ -43,7 +43,7 @@ import GalleryHeader from '/components/gallery/GalleryHeader.vue'
 import WorkTypeCategory from '/components/gallery/WorkTypeCategory.vue'
 import Footer from '/components/global/Footer'
 
-let galleries, media, images, imageLinks
+let galleries, media, images, imageLinks, isVideo, srcLinks
 let sections = []
 
 function getFileName(link) {
@@ -87,34 +87,39 @@ export default {
         },
       ]
 
+      // TODO: figure out if galleries is no longer needed
       // sort galleries based on position
       galleries.sort((g1, g2) => g1.position - g2.position)
 
       // for images array will contain src links only for WorkTypeCategory
       images = galleries.reduce((acc, gallery) => {
         imageLinks = gallery.images.flat()
+        isVideo = gallery.section === 'Video'
+        srcLinks = isVideo
+          ? imageLinks.map((link) => createLink(link, false).src)
+          : imageLinks.map((link) => createLink(gallery.path + `/${getFileName(link)}`).src)
 
-        if (gallery.section === 'Video') {
+        if (isVideo) {
           // create video links
           return {
             ...acc,
-            [gallery.slug]: imageLinks.map((link) => createLink(gallery.path + `/${getFileName(link)}`, false).src),
+            [gallery.slug]: srcLinks,
           }
         }
 
         return {
           ...acc,
-          [gallery.slug]: imageLinks.map((link) => createLink(gallery.path + `/${getFileName(link)}`).src),
+          [gallery.slug]: srcLinks,
         }
       }, {})
 
       // create media arr (src and thumb links) for LightBox
-      media = galleries.map((gallery) => {
-        imageLinks = gallery.images.flat()
-        return imageLinks.map((link) => createLink(gallery.path + `/${getFileName(link)}`))
-      })
-      // flatten array of arrays into 1 array
-      media = media.flat()
+      media = galleries
+        .map((gallery) => {
+          imageLinks = gallery.images.flat()
+          return imageLinks.map((link) => createLink(gallery.path + `/${getFileName(link)}`))
+        })
+        .flat()
 
       // console.log('MEDIA', media)
       // console.log('IMAGES', images)
@@ -122,7 +127,7 @@ export default {
       error({ Message: 'Gallery not found' })
     }
 
-    // console.log('GALL', galleries)
+    console.log('GALL', galleries)
     // console.log('SECTIONS', sections)
 
     return { galleries, media, images, sections }
