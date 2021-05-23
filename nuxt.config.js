@@ -123,7 +123,7 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     // ? Whitelisting docs: https://v1.purgecss.com/whitelisting
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
+    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'vimeo-video'],
     whitelistPatterns: [/^card/, /^nuxt-content/, /image$/, /title$/],
     whitelistPatternsChildren: [/^nuxt-content/, /code/, /pre/, /token/, /^vue-content-placeholders/]
   },
