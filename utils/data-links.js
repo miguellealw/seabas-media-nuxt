@@ -4,7 +4,6 @@ const cloudName = 'seabas-media'
 const cloudVersion = 'v1621218000'
 
 function createVideoLink(link) {
-  console.log(link)
   const arr = link.split('/')
   const vidNum = arr[arr.length - 1]
 
@@ -20,13 +19,14 @@ function createVideoLink(link) {
  * @returns - object with link to thumnail and src
  */
 export const createLink = (path, isImage = true) => {
+  console.log('SDFSDFSDFSDF', path)
   const mediaType = isImage ? 'image' : 'video'
 
   if (mediaType === 'video') {
     return {
       src: `<iframe title="vimeo-player" src="${createVideoLink(
         path
-      )}" width="640" height="360" frameborder="0" allowfullscreen style="width:100%; object-fit: cover;"></iframe>`
+      )}" width="640" height="360" frameborder="0" allowfullscreen class="vimeo-video"></iframe>`
     }
   }
 
