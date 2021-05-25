@@ -19,7 +19,6 @@ function createVideoLink(link) {
  * @returns - object with link to thumnail and src
  */
 export const createLink = (path, isImage = true) => {
-  console.log('SDFSDFSDFSDF', path)
   const mediaType = isImage ? 'image' : 'video'
 
   if (mediaType === 'video') {
