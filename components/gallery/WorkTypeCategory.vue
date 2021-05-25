@@ -16,10 +16,16 @@
 
       <li v-else-if="workType === 'Videos'" v-for="(image, index) of images" :key="index" v-html="image"></li>
 
-      <li v-else @click="openGallery(image)" class="cursor-pointer" v-for="(image, index) of images" :key="index">
+      <li
+        v-else
+        @click="openGallery(image)"
+        class="cursor-pointer flex items-center bg-gray-100"
+        v-for="(image, index) of images"
+        :key="index"
+      >
         <template>
           <LazyImage
-            class="h-full w-full object-cover object-center"
+            :class="`w-full ${workType === 'Graphic Design' ? 'h-auto' : 'h-full object-cover'} object-center`"
             :lozad-lazy-src="image"
             :width="500"
             :height="800"
