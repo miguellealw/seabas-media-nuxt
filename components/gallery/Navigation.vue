@@ -74,8 +74,8 @@
 export default {
   data() {
     return {
-      isNavOpen: false,
-      navDisplayStyle: 'none',
+      isNavOpen: true,
+      navDisplayStyle: 'flex',
     }
   },
   methods: {
