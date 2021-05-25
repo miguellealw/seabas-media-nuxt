@@ -1,8 +1,10 @@
 <template>
   <nav class="w-1/12 h-screen pl-12 fixed left-0 bottom-0 flex items-center justify-center heading-xs-uppercase">
+    <!-- The Sections -->
     <ul>
-      <li class="my-2 text-gray-500" v-for="(section, sectionIndex) in sections" :key="sectionIndex">
+      <li class="my-2 mt-4 text-gray-500" v-for="(section, sectionIndex) in sections" :key="sectionIndex">
         <a :href="'#' + section.slug" class="tracking-widest hover:text-black">{{ section.name }}</a>
+        <!-- Galleries in each Section -->
         <ul>
           <li
             v-for="(gallery, index) in section.galleries"
