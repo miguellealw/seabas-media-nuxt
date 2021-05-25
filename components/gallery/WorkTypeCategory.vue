@@ -19,7 +19,7 @@
       <li
         v-else
         @click="openGallery(image)"
-        class="cursor-pointer flex items-center bg-gray-100"
+        class="cursor-pointer flex items-center"
         v-for="(image, index) of images"
         :key="index"
       >
