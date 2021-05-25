@@ -21,7 +21,7 @@
               :galleryPath="gallery.path"
               :galleryTitle="gallery.title"
               :openGallery="openGallery"
-              :sectionId="'photography-' + gallery.slug"
+              :sectionId="`${section.slug}-${gallery.slug}`"
             />
           </div>
         </li>
@@ -62,6 +62,7 @@ function getSection(galleries, section) {
 
 export default {
   name: 'WorkGalleryPage',
+  // layout: 'gallery',
   components: { GalleryHeader, WorkTypeCategory, Footer, LightBox },
 
   async asyncData({ $content, params, error }) {
@@ -97,7 +98,7 @@ export default {
         isVideo = gallery.section === 'Video'
         srcLinks = isVideo
           ? imageLinks.map((link) => createLink(link, false).src)
-          : imageLinks.map((link) => createLink(gallery.path + `/${getFileName(link)}`).src)
+          : imageLinks.map((link) => createLink(`${gallery.path}/${getFileName(link)}`).src)
 
         if (isVideo) {
           // create video links
@@ -127,7 +128,7 @@ export default {
       error({ Message: 'Gallery not found' })
     }
 
-    console.log('GALL', galleries)
+    // console.log('GALL', galleries)
     // console.log('SECTIONS', sections)
 
     return { galleries, media, images, sections }
