@@ -19,7 +19,8 @@
     "lozad": "^1.16.0",
     "nuxt": "^2.15.0",
     "velocity-animate": "^1.5.2",
-    "vue-image-lightbox": "^7.2.0"
+    "vue-image-lightbox": "^7.2.0",
+    "vue-screen": "^1.5.4"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.3",
