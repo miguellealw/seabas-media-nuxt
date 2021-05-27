@@ -1,9 +1,18 @@
 <template>
-  <nav class="w-1/12 h-screen pl-12 fixed left-0 bottom-0 flex items-center justify-center heading-xs-uppercase">
+  <nav class="w-1/12 pl-12 h-screen fixed left-0 bottom-0 flex items-center justify-center heading-xs-uppercase">
+    <!-- <nav
+    class="w-52 fixed flex items-center justify-center heading-xs-uppercase"
+    v-bind:style="{ left: '33rem', top: '14rem' }"
+  > -->
     <!-- The Sections -->
     <ul>
       <li class="my-2 mt-4 text-gray-500" v-for="(section, sectionIndex) in sections" :key="sectionIndex">
-        <a :href="'#' + section.slug" class="tracking-widest hover:text-black">{{ section.name }}</a>
+        <!-- <a :href="'#' + section.slug" class="tracking-widest hover:text-black">{{ section.name }}</a> -->
+
+        <NuxtLink :to="`/gallery/${section.slug}`" class="tracking-widest hover:text-black">{{
+          section.name
+        }}</NuxtLink>
+
         <!-- Galleries in each Section -->
         <ul>
           <li
@@ -24,7 +33,7 @@
       </li>
 
       <li class="my-2 text-gray-500 hover:text-black">
-        <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">Message Me on Instagram</a>
+        <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">DM Me on Instagram</a>
       </li>
     </ul>
   </nav>
@@ -33,6 +42,9 @@
 <script>
 export default {
   name: 'SideNavigation',
+  data: {
+    left: '34rem',
+  },
   props: {
     galleries: {
       type: Array,

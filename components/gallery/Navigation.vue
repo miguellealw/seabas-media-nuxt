@@ -48,7 +48,7 @@
         </li>
 
         <li class="my-2 text-gray-500 hover:text-black">
-          <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">Message Me on Instagram</a>
+          <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">DM Me on Instagram</a>
         </li>
       </ul>
     </div>
