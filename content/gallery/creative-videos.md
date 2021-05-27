@@ -1,6 +1,6 @@
 ---
 title: Creative Videos
-section: Video
+section: Videos
 position: 1
 images:
   - https://vimeo.com/466777132
