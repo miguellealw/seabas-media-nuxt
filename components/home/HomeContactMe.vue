@@ -13,7 +13,7 @@
       style="border-width: 1px"
     >
       <a href="https://www.instagram.com/seabasmedia/?hl=en" class="block text-center py-2 h-full" target="_blank"
-        >Message Me on Instagram</a
+        >DM Me on Instagram</a
       >
     </button>
   </section>
