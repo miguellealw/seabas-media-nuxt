@@ -98,7 +98,7 @@ collections:
     view_groups:
       - label: 'Section: '
         field: section
-        pattern: 'Photography|Video|Graphic Design'
+        pattern: 'Photography|Videos|Graphic Design'
     fields:
       - label: 'Gallery Title'
         name: 'title'
@@ -106,7 +106,7 @@ collections:
       - label: 'Section'
         name: 'section'
         widget: 'select'
-        options: ['Photography', 'Video', 'Graphic Design']
+        options: ['Photography', 'Videos', 'Graphic Design']
       - label: 'Position'
         name: 'position'
         widget: 'number'
