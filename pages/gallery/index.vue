@@ -1,36 +1,23 @@
 <template>
-  <div>
-    <gallery-header :sections="sections" :galleries="galleries" />
-    <main class="w-3/4 mx-auto my-4 max-w-screen-lg mt-20 relative">
-      <router-link to="/" class="uppercase block mb-5 text-xs text-gray-500">Home Page</router-link>
+  <ul>
+    <li v-for="(section, sectionIndex) in storeSections" :key="sectionIndex" :id="section.slug">
+      <hr class="w-10 my-3" />
+      <h1 class="heading-xs-uppercase">{{ section.name }}</h1>
+      <hr class="w-10 my-3" />
 
-      <ul>
-        <!-- TODO: slugify section name (section.section) for id -->
-        <li v-for="(section, sectionIndex) in sections" :key="sectionIndex" :id="section.slug">
-          <!-- <li v-for="(section, sectionIndex) in sections" :key="sectionIndex"> -->
-          <!-- <h1 class="heading-xs-uppercase">Photography</h1> -->
-          <hr class="w-10 my-3" />
-          <h1 class="heading-xs-uppercase">{{ section.name }}</h1>
-          <hr class="w-10 my-3" />
-
-          <div v-for="(gallery, index) in section.galleries" :key="index">
-            <work-type-category
-              :category="gallery.title"
-              :images="images[gallery.slug]"
-              :workType="section.name"
-              :galleryPath="gallery.path"
-              :galleryTitle="gallery.title"
-              :openGallery="openGallery"
-              :sectionId="`${section.slug}-${gallery.slug}`"
-            />
-          </div>
-        </li>
-      </ul>
-    </main>
-
-    <LightBox ref="lightbox" :media="media" :show-caption="true" :show-light-box="false" site-loading="Loading..." />
-    <Footer />
-  </div>
+      <div v-for="(gallery, index) in section.galleries" :key="index">
+        <work-type-category
+          :category="gallery.title"
+          :images="storeImages[gallery.slug]"
+          :workType="section.name"
+          :galleryPath="gallery.path"
+          :galleryTitle="gallery.title"
+          :openGallery="openGallery"
+          :sectionId="`${section.slug}-${gallery.slug}`"
+        />
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -42,6 +29,8 @@ import { createLink } from '/utils/data-links.js'
 import GalleryHeader from '/components/gallery/GalleryHeader.vue'
 import WorkTypeCategory from '/components/gallery/WorkTypeCategory.vue'
 import Footer from '/components/global/Footer'
+
+import { mapState } from 'vuex'
 
 let galleries, media, images, imageLinks, isVideo, srcLinks
 let sections = []
@@ -62,15 +51,37 @@ function getSection(galleries, section) {
 
 export default {
   name: 'WorkGalleryPage',
-  // layout: 'gallery',
+  layout: 'gallery',
   components: { GalleryHeader, WorkTypeCategory, Footer, LightBox },
 
-  async asyncData({ $content, params, error }) {
+  // computed: mapState(['galleries/testNum']),
+  computed: {
+    ...mapState({
+      storeGalleries: (state) => state.galleries.all,
+      storeSections: (state) => state.galleries.sections,
+      storeImages: (state) => state.galleries.galleryData,
+      storeMedia: (state) => state.galleries.media,
+    }),
+  },
+
+  props: {
+    openGallery: {
+      type: Function,
+      required: true,
+    },
+  },
+
+  async asyncData({ $content, params, error, store }) {
     try {
       galleries = await $content('gallery').fetch()
+      // sort galleries based on position
+      galleries.sort((g1, g2) => g1.position - g2.position)
+
+      store.commit('galleries/setGalleries', galleries)
 
       // get galleries of each section
-      sections = [
+      // TODO: figure out how to put all state in store
+      store.commit('galleries/setSections', [
         {
           name: 'Photography',
           slug: 'photography',
@@ -86,13 +97,10 @@ export default {
           slug: 'graphic_design',
           galleries: [...getSection(galleries, 'Graphic Design').sort((g1, g2) => g1.position - g2.position)],
         },
-      ]
-
-      // TODO: figure out if galleries is no longer needed
-      // sort galleries based on position
-      galleries.sort((g1, g2) => g1.position - g2.position)
+      ])
 
       // for images array will contain src links only for WorkTypeCategory
+      // TODO: figure out how to put all state in store
       images = galleries.reduce((acc, gallery) => {
         imageLinks = gallery.images.flat()
         isVideo = gallery.section === 'Video'
@@ -100,21 +108,16 @@ export default {
           ? imageLinks.map((link) => createLink(link, false).src)
           : imageLinks.map((link) => createLink(`${gallery.path}/${getFileName(link)}`).src)
 
-        if (isVideo) {
-          // create video links
-          return {
-            ...acc,
-            [gallery.slug]: srcLinks,
-          }
-        }
-
         return {
           ...acc,
           [gallery.slug]: srcLinks,
         }
       }, {})
 
+      store.commit('galleries/setGalleryData', images)
+
       // create media arr (src and thumb links) for LightBox
+      // TODO: figure out how to put all state in store
       media = galleries
         .map((gallery) => {
           imageLinks = gallery.images.flat()
@@ -122,32 +125,23 @@ export default {
         })
         .flat()
 
-      // console.log('MEDIA', media)
-      // console.log('IMAGES', images)
+      console.log('MEDIA IN INDEX PAGE', media)
+
+      store.commit('galleries/setMedia', media)
     } catch (e) {
       error({ Message: 'Gallery not found' })
     }
 
     // console.log('GALL', galleries)
+    // console.log('MEDIA', media)
+    // console.log('IMAGES', images)
     // console.log('SECTIONS', sections)
 
-    return { galleries, media, images, sections }
+    return { galleries, media, images }
   },
 
   mounted() {
     window.scrollTo(0, 0)
-  },
-
-  methods: {
-    /**
-     * @params {string} imageLinkSrc - image link src that will be used to find index from media array
-     */
-    openGallery(imageLinkSrc) {
-      // use media array since it contains a flattened array of all images from different gallereis,
-      // therefore the link that corresponds with its index will be the index the light box will take
-      const index = this.media.findIndex((link) => link.src == imageLinkSrc)
-      this.$refs.lightbox.showImage(index)
-    },
   },
 }
 </script>
