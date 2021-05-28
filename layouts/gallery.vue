@@ -16,7 +16,7 @@
 import LightBox from '/components/LightBox/LightBox.vue'
 import GalleryHeader from '/components/gallery/GalleryHeader.vue'
 import WorkTypeCategory from '/components/gallery/WorkTypeCategory.vue'
-import Footer from '/components/global/Footer'
+import GalleryFooter from '/components/global/Footer'
 
 import { mapState } from 'vuex'
 
@@ -25,7 +25,7 @@ import { mapState } from 'vuex'
 let sectionName
 
 export default {
-  components: { GalleryHeader, WorkTypeCategory, Footer, LightBox },
+  components: { GalleryHeader, WorkTypeCategory, GalleryFooter, LightBox },
   methods: {
     /**
      * @params {string} imageLinkSrc - image link src that will be used to find index from media array
