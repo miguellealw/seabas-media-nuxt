@@ -122,7 +122,7 @@ function getSectionFromGalleries(galleries, sectionName) {
 export const mutations = {
   setGalleries(state, galleries) {
     // replace whole array
-    console.log('GALL', galleries)
+    // TODO: CONSIDER NOT USING set - https://stackoverflow.com/questions/50767191/vuex-update-an-entire-array/50767787
     Vue.set(state, 'all', [...galleries.sort((g1, g2) => g1.position - g2.position)])
   },
   setSections(state) {
