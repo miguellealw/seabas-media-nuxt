@@ -21,7 +21,8 @@
     "slugify": "^1.5.3",
     "velocity-animate": "^1.5.2",
     "vue-image-lightbox": "^7.2.0",
-    "vue-screen": "^1.5.4"
+    "vue-screen": "^1.5.4",
+    "vue-video-player": "^5.0.2"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.3",
