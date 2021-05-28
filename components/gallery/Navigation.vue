@@ -27,7 +27,7 @@
           v-for="(section, sectionIndex) in sections"
           :key="sectionIndex"
         >
-          <a :href="`#${section.slug}`" class="tracking-widest hover:text-black">{{ section.name }}</a>
+          <a :href="`/gallery/${section.slug}`" class="tracking-widest hover:text-black">{{ section.name }}</a>
           <!-- Galleries in each section -->
           <ul>
             <li
@@ -35,7 +35,7 @@
               :key="index"
               class="my-2 ml-4 text-gray-500 hover:text-black"
             >
-              <a :href="`gallery/${section.slug}#${section.name}-${gallery.slug}`" class="tracking-widest">
+              <a :href="`/gallery/${section.slug}#${section.name}-${gallery.slug}`" class="tracking-widest">
                 - {{ gallery.title }}</a
               >
             </li>
@@ -62,8 +62,8 @@ export default {
   name: 'Navigation',
   data() {
     return {
-      isNavOpen: true,
-      navDisplayStyle: 'flex',
+      isNavOpen: false,
+      navDisplayStyle: 'none',
     }
   },
   methods: {
