@@ -35,16 +35,16 @@ export default {
       }
     ],
     link: [
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: true
-      },
-      {
-        rel: 'preload',
-        as: 'style',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'
-      },
+      // {
+      //   rel: 'preconnect',
+      //   href: 'https://fonts.gstatic.com',
+      //   crossorigin: true
+      // },
+      // {
+      //   rel: 'preload',
+      //   as: 'style',
+      //   href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'
+      // },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
@@ -58,10 +58,10 @@ export default {
       }
     ], // ? Imports the font 'Inter', can be optimized by the netlify plugin 'Subfont' by uncommenting it in `netlify.toml`
     noscript: [
-      {
-        innerHTML:
-          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">'
-      }
+      // {
+      //   innerHTML:
+      //     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">'
+      // }
     ],
     __dangerouslyDisableSanitizers: ['noscript']
   },
