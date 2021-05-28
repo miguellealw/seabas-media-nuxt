@@ -1,5 +1,5 @@
 Fix Issues:
-☐ fix favicon on mobile
+✔ fix favicon on mobile @done(21-05-21 18:38)
 
 ✔ fix images not being previewed properly in CMS @done(21-05-19 04:02)
   - CONSIDER: remove output_filename_only and parse url for file name then pass into data links link generator as normal
@@ -9,7 +9,7 @@ Fix Issues:
 
 ✔ fix navigation in gallery. make dynamic based on galleries added from CMS @done(21-05-20 01:10)
 
-☐ allow editing on home page gallery through CMS
+✔ allow editing on home page gallery through CMS @done(21-05-20 02:25)
 
 ✔ allow editing on home page about me through CMS @done(21-05-19 00:15)
 
@@ -36,11 +36,29 @@ Fix Issues:
 ✔ fix column height in gallery @done(21-05-17 23:45)
   - all picture should have the same col height
 
-☐ better performance in gallery
+✔ fix row size in about me text and image @done(21-05-23 22:39)
+
+✔ better performance in gallery @done(21-05-24 20:15)
   ☐ image is fetched twice (once when it loads and another when lightbox is opened)
   ✔ lower size of images @done(21-05-20 01:11)
-  ☐ rednering of images is low
+
+☐ Move each section in gallery into its own page
+  ☐ move galleries, sections, galleryData (images), media to vuex store
+  ☐ make layout of gallery from header, footer, and lightbox
+    ☐ get data (i.e. sections) to header for nav
+    ☐ get data (i.e. media) for lightbox
+  ☐ setup router for photography, video, and graphic design section
+
+☐ Use video.js for video player
+  ☐ check if video player works with cloudinary videos on ios
+    - https://docs.videojs.com/tutorial-vue.html
+    - https://www.programmersought.com/article/53465719893/
+
+☐ Make requests to the cms using params to only fetch data fro each page (photography, videos, graphic design)
+  ☐ Avoid getting all cms data on a single page
 
 Future Todos:
-☐ allow for adding videos and graphic design and image previews 
+✔ allow for adding videos and graphic design and image previews @done(21-05-21 23:33)
+✔ Make navigation a sidebar in desktop @done(21-05-25 01:19)
 ☐ allow zooming in to picture in lightbox
+☐ allow for changing landing page video
