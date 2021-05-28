@@ -23,7 +23,7 @@
       </ul>
 
       <!-- NOTE: put router link outside button so it loads button on ipad -->
-      <router-link to="/gallery" class="my-work-button mt-5 self-center md:self-start">
+      <router-link to="/gallery/photography" class="my-work-button mt-5 self-center md:self-start">
         <button
           class="uppercase px-10 py-3 text-xs block hover:bg-black hover:text-white"
           style="border: 2px solid black"

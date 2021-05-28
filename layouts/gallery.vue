@@ -1,6 +1,6 @@
 <template>
   <div>
-    <gallery-header :sections="sections" :galleries="galleries" />
+    <gallery-header :sections="sections" :galleries="galleries" :sectionName="sectionName" />
     <main class="w-3/4 mx-auto my-4 max-w-screen-lg mt-20 relative">
       <router-link to="/" class="uppercase block mb-5 text-xs text-gray-500">Home Page</router-link>
       <NuxtChild :openGallery="openGallery" />
@@ -58,6 +58,9 @@ export default {
     media() {
       sectionName = this.$nuxt.$route.name.split('-')[1]
       return this.$store.getters['galleries/media'](sectionName)
+    },
+    sectionName() {
+      return this.$nuxt.$route.name.split('-')[1]
     },
   },
   mounted() {

@@ -20,7 +20,9 @@
             :key="index"
             class="my-2 ml-4 text-gray-500 hover:text-black"
           >
-            <a :href="`#${section.slug}-${gallery.slug}`" class="tracking-widest"> - {{ gallery.title }}</a>
+            <a :href="`/gallery/${section.slug}#${section.slug}-${gallery.slug}`" class="tracking-widest">
+              - {{ gallery.title }}</a
+            >
           </li>
         </ul>
       </li>
@@ -51,6 +53,9 @@ export default {
     },
     sections: {
       type: Array,
+    },
+    currentsSectionName: {
+      type: String,
     },
   },
 }
