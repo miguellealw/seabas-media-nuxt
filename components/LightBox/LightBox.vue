@@ -33,8 +33,8 @@
                 :alt="media[select].caption"
               /> -->
 
+              <!-- v-if="media[select].type !== 'video'" -->
               <LazyImage
-                v-if="media[select].type !== 'video'"
                 :key="media[select].src"
                 :lozad-lazy-src="media[select].src"
                 :lozad-lazy-srcset="media[select].srcset || ''"
@@ -42,7 +42,7 @@
                 :alt="media[select].caption"
               />
 
-              <video
+              <!-- <video
                 v-else
                 ref="video"
                 :key="media[select].sources[0].src"
@@ -57,7 +57,7 @@
                   :src="source.src"
                   :type="source.type"
                 />
-              </video>
+              </video> -->
             </transition>
 
             <!-- <slot name="customCaption">
