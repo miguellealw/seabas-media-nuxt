@@ -72,14 +72,15 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.pcss'],
+  css: ['@/assets/css/main.pcss', 'video.js/dist/video-js.css'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     '~/plugins/vue-content-placeholders.js',
     { src: '~plugins/velocity.js', mode: 'client' },
-    { src: '~plugins/vue-screen.js', mode: 'client' }
+    { src: '~plugins/vue-screen.js', mode: 'client' },
+    { src: '~plugins/video-player.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
