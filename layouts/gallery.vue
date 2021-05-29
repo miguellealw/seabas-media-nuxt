@@ -20,8 +20,6 @@ import GalleryFooter from '/components/global/Footer'
 
 import { mapState } from 'vuex'
 
-// const SECTION_NAME = 'Photography'
-// const SECTION_NAME = 'photography'
 let sectionName
 
 export default {
@@ -37,11 +35,9 @@ export default {
       try {
         sectionName = $nuxt.$route.name.split('-')[1]
         const media = this.$store.getters['galleries/media'](sectionName)
-        const index = media.findIndex((link) => {
-          return link.src === imageLinkSrc
-        })
+        const index = media.findIndex((link) => link.src === imageLinkSrc)
 
-        if (index < 0) throw new Error('openGallery Index Not Found in media array')
+        if (index < 0) throw new Error('Index Not Found in media array')
 
         this.$refs.lightbox.showImage(index)
       } catch (e) {

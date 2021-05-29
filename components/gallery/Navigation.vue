@@ -15,6 +15,7 @@
       <span
         class="my-work-nav-lightbox-close absolute top-0 left-0 uppercase font-bold text-xs ml-5 mt-5 z-20 cursor-pointer"
         @click="handleOpenNav"
+        v-show="showCloseButton"
       >
         close
       </span>
@@ -27,7 +28,9 @@
           v-for="(section, sectionIndex) in sections"
           :key="sectionIndex"
         >
-          <a :href="`/gallery/${section.slug}`" class="tracking-widest hover:text-black">{{ section.name }}</a>
+          <a :href="`/gallery/${section.slug}`" class="tracking-widest text-black hover:underline">{{
+            section.name
+          }}</a>
           <!-- Galleries in each section -->
           <ul>
             <li
@@ -62,8 +65,8 @@ export default {
   name: 'Navigation',
   data() {
     return {
-      isNavOpen: false,
-      navDisplayStyle: 'none',
+      isNavOpen: this.isOpen,
+      navDisplayStyle: this.isOpen ? 'flex' : 'none',
     }
   },
   methods: {
@@ -82,6 +85,14 @@ export default {
     },
     currentSectionName: {
       type: String,
+    },
+    isOpen: {
+      type: Boolean,
+      default: false,
+    },
+    showCloseButton: {
+      type: Boolean,
+      default: true,
     },
   },
 }

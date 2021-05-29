@@ -9,7 +9,7 @@
       <li class="my-2 mt-4 text-gray-500" v-for="(section, sectionIndex) in sections" :key="sectionIndex">
         <!-- <a :href="'#' + section.slug" class="tracking-widest hover:text-black">{{ section.name }}</a> -->
 
-        <NuxtLink :to="`/gallery/${section.slug}`" class="tracking-widest hover:text-black">{{
+        <NuxtLink :to="`/gallery/${section.slug}`" class="tracking-widest text-black hover:underline">{{
           section.name
         }}</NuxtLink>
 
@@ -60,3 +60,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+a.nuxt-link-active {
+  text-decoration: underline;
+}
+
+a.nuxt-link-exact-active {
+}
+</style>
