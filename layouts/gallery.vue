@@ -5,7 +5,15 @@
       <router-link to="/" class="uppercase block mb-5 text-xs text-gray-500">Home Page</router-link>
       <NuxtChild :openGallery="openGallery" />
     </main>
-    <LightBox ref="lightbox" :media="media" :show-caption="true" :show-light-box="false" site-loading="Loading..." />
+
+    <LightBox
+      :v-if="sectionName === 'videos'"
+      ref="lightbox"
+      :media="media"
+      :show-caption="true"
+      :show-light-box="false"
+      site-loading="Loading..."
+    />
     <Footer />
   </div>
 </template>
@@ -23,6 +31,7 @@ import { mapState } from 'vuex'
 let sectionName
 
 export default {
+  name: 'Gallery',
   components: { GalleryHeader, WorkTypeCategory, GalleryFooter, LightBox },
   methods: {
     /**
@@ -53,6 +62,7 @@ export default {
     }),
     media() {
       sectionName = this.$nuxt.$route.name.split('-')[1]
+      console.log('SECDTION NAME', sectionName)
       return this.$store.getters['galleries/media'](sectionName)
     },
     sectionName() {

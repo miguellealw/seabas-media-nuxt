@@ -1,10 +1,6 @@
 import Vue from 'vue'
 import { createLink } from '/utils/data-links.js'
 
-// const PHOTOGRAPHY = 'Photography'
-// const VIDEO = 'Video'
-// const GRAPHIC_DESIGN = 'Graphic Design'
-
 const PHOTOGRAPHY = 'photography'
 const VIDEO = 'videos'
 const GRAPHIC_DESIGN = 'graphic_design'
@@ -19,20 +15,17 @@ export const state = () => ({
     {
       name: 'Photography',
       slug: 'photography',
-      galleries: [],
-      media: []
+      galleries: []
     },
     {
       name: 'Videos',
       slug: 'videos',
-      galleries: [],
-      media: []
+      galleries: []
     },
     {
       name: 'Graphic Design',
       slug: 'graphic_design',
-      galleries: [],
-      media: []
+      galleries: []
     }
   ]
 })
@@ -52,16 +45,10 @@ export const getters = {
     try {
       if (state.sections.length === 0) throw new Error('Sections array not set in global state')
 
-      // TODO: make sectionName lowercase all lower and const's aswell
       if (sectionName !== PHOTOGRAPHY && sectionName !== VIDEO && sectionName !== GRAPHIC_DESIGN)
         throw new Error('Section Name Not Valid')
 
-      return state.sections.find(section => {
-        // console.log('section.slug', section.slug)
-        // console.log('sectionName', sectionName)
-        // console.log(section.slug === sectionName)
-        return section.slug === sectionName
-      })
+      return state.sections.find(section => section.slug === sectionName)
     } catch (e) {
       console.error('getSection getter ERROR: ', e)
     }
@@ -73,14 +60,14 @@ export const getters = {
   // },
 
   // media is an array of data links objects {src, thumb} for the lightbox component
-  media: (state, getters) => sectionName => {
+  media: (_, getters) => sectionName => {
+    if (sectionName === VIDEO) return null
+
     let imageLinks
+    const currentSection = getters.getSection(sectionName)
     return [
-      // ...state.all.map(gallery => {
-      // TODO: multi dimension array being created. must be flat array
-      ...getters
-        .getSection(sectionName)
-        .galleries.map(gallery => {
+      ...currentSection.galleries
+        .map(gallery => {
           imageLinks = gallery.images.flat()
           return imageLinks.map(link => createLink(`${gallery.path}/${getFileName(link)}`))
         })
@@ -90,7 +77,7 @@ export const getters = {
 
   // object mapping data from gallery section and gallery subsection (e.g. portraits, creative)
   // { portraits: [...src_links], creative: [...src_links] }
-  galleryData: (state, getters) => sectionName => {
+  galleryData: (_, getters) => sectionName => {
     // todo: MAKE SO images returned are per page
     let imageLinks, isVideo, srcLinks
 
