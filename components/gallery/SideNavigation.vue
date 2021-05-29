@@ -44,9 +44,6 @@
 <script>
 export default {
   name: 'SideNavigation',
-  data: {
-    left: '34rem',
-  },
   props: {
     galleries: {
       type: Array,
