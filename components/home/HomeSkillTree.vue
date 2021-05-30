@@ -44,9 +44,9 @@ export default {
   name: 'HomeSKillTree',
   props: ['skills'],
   mounted() {
-    if (process.client) {
-      const Velocity = () => import('velocity-animate')
-    }
+    // if (process.client) {
+    //   const Velocity = () => import('velocity-animate')
+    // }
   },
   methods: {
     beforeEnter: function (el) {
