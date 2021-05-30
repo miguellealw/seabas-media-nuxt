@@ -42,12 +42,12 @@ Fix Issues:
   ☐ image is fetched twice (once when it loads and another when lightbox is opened)
   ✔ lower size of images @done(21-05-20 01:11)
 
-☐ Move each section in gallery into its own page
-  ☐ move galleries, sections, galleryData (images), media to vuex store
-  ☐ make layout of gallery from header, footer, and lightbox
-    ☐ get data (i.e. sections) to header for nav
-    ☐ get data (i.e. media) for lightbox
-  ☐ setup router for photography, video, and graphic design section
+✔ Move each section in gallery into its own page @done(21-05-28 21:17)
+  ✔ move galleries, sections, galleryData (images), media to vuex store @done(21-05-28 21:17)
+  ✔ make layout of gallery from header, footer, and lightbox @done(21-05-28 21:17)
+    ✔ get data (i.e. sections) to header for nav @done(21-05-28 21:17)
+    ✔ get data (i.e. media) for lightbox @done(21-05-28 21:17)
+  ✔ setup router for photography, video, and graphic design section @done(21-05-28 21:17)
 
 ☐ Use video.js for video player
   ☐ check if video player works with cloudinary videos on ios
@@ -56,6 +56,8 @@ Fix Issues:
 
 ☐ Make requests to the cms using params to only fetch data fro each page (photography, videos, graphic design)
   ☐ Avoid getting all cms data on a single page
+  ☐ vuex does not persist data b/w pages
+    ☐ https://github.com/robinvdvleuten/vuex-persistedstate
 
 Future Todos:
 ✔ allow for adding videos and graphic design and image previews @done(21-05-21 23:33)
