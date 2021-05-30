@@ -21,7 +21,7 @@ export default {
     }),
   },
 
-  async asyncData({ $content, params, error, store }) {
+  async fetch({ $content, params, error, store }) {
     try {
       galleries = await $content('gallery').fetch()
       store.commit('galleries/setGalleries', galleries)
