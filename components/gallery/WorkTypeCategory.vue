@@ -14,7 +14,11 @@
         </content-placeholders>
       </li>
 
+      <!-- Video Iframe -->
       <li v-else-if="workType === 'Videos'" v-for="(image, index) of images" :key="index" v-html="image"></li>
+      <!-- <li v-else-if="workType === 'Videos'" v-for="(image, index) of images" :key="index" class="flex items-center">
+        <video-player :videoSrc="image" />
+      </li> -->
 
       <li
         v-else
@@ -35,13 +39,6 @@
             :index="index"
           />
         </template>
-        <!-- <img
-          class="h-full w-full object-cover object-center"
-          v-lazy="image"
-
-          alt="portrait 1"
-          @click="openGallery(index)"
-        /> -->
       </li>
     </ul>
   </section>
@@ -49,6 +46,7 @@
 
 <script>
 import LazyImage from '../global/LazyImage.vue'
+import VideoPlayer from '../global/VideoPlayer.vue'
 
 /**
  * use mediacount to decided what index to pass to openGallery function
@@ -58,7 +56,7 @@ import LazyImage from '../global/LazyImage.vue'
  */
 
 export default {
-  components: { LazyImage },
+  components: { LazyImage, VideoPlayer },
   data() {
     return {
       isLoading: true,
