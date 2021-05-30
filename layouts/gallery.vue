@@ -6,14 +6,9 @@
       <NuxtChild :openGallery="openGallery" />
     </main>
 
-    <LightBox
-      :v-if="sectionName === 'videos'"
-      ref="lightbox"
-      :media="media"
-      :show-caption="true"
-      :show-light-box="false"
-      site-loading="Loading..."
-    />
+    <template v-if="sectionName !== 'videos'">
+      <LightBox ref="lightbox" :media="media" :show-caption="true" :show-light-box="false" site-loading="Loading..." />
+    </template>
     <Footer />
   </div>
 </template>
