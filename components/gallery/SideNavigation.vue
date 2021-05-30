@@ -20,8 +20,9 @@
             :key="index"
             class="my-2 ml-4 text-gray-500 hover:text-black"
           >
-            <a :href="`/gallery/${section.slug}#${section.slug}-${gallery.slug}`" class="tracking-widest">
-              - {{ gallery.title }}</a
+            <NuxtLink :to="`/gallery/${section.slug}#${section.slug}-${gallery.slug}`" class="tracking-widest">
+              - {{ gallery.title }}</NuxtLink
+            >
             >
           </li>
         </ul>

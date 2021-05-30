@@ -28,9 +28,10 @@
           v-for="(section, sectionIndex) in sections"
           :key="sectionIndex"
         >
-          <a :href="`/gallery/${section.slug}`" class="tracking-widest text-black hover:underline">{{
+          <NuxtLink :to="`/gallery/${section.slug}`" class="tracking-widest text-black hover:underline">{{
             section.name
-          }}</a>
+          }}</NuxtLink>
+
           <!-- Galleries in each section -->
           <ul>
             <li
@@ -38,8 +39,8 @@
               :key="index"
               class="my-2 ml-4 text-gray-500 hover:text-black"
             >
-              <a :href="`/gallery/${section.slug}#${section.slug}-${gallery.slug}`" class="tracking-widest">
-                - {{ gallery.title }}</a
+              <NuxtLink :to="`/gallery/${section.slug}#${section.slug}-${gallery.slug}`" class="tracking-widest">
+                - {{ gallery.title }}</NuxtLink
               >
             </li>
           </ul>
