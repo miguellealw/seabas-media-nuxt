@@ -11,7 +11,11 @@ function createVideoLink(link) {
   //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   //         allowFullScreen></iframe>
 
-  const arr = link.split('/')
+  // split depending on link type
+  let arr
+  if (link.includes('watch?')) arr = link.split('=')
+  else arr = link.split('/')
+
   const vidID = arr[arr.length - 1]
 
   // e.g. convert https://vimeo.com/466777132 to https://player.vimeo.com/video/466777132
