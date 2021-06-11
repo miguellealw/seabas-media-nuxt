@@ -41,6 +41,7 @@ export default {
   async asyncData({ $content, route, error, store }) {
     try {
       galleries = await $content('gallery').fetch()
+      // console.log('VIDEOS DATA FETCHED')
       store.commit('galleries/setGalleries', galleries)
       store.commit('galleries/setSections')
     } catch (e) {

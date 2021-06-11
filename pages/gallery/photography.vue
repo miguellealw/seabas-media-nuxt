@@ -40,9 +40,13 @@ export default {
 
   async asyncData({ $content, route, error, store }) {
     try {
+      // TODO: CONSIDER ADDING CONDITIONAL CHECK ON STORE
+      // if (store.state.galleries.all.length != 0) {
       galleries = await $content('gallery').fetch()
+      // console.log('PHOTOGRAY DATA FETCHED')
       store.commit('galleries/setGalleries', galleries)
       store.commit('galleries/setSections')
+      // }
     } catch (e) {
       error({ Message: 'Gallery not found' })
     }

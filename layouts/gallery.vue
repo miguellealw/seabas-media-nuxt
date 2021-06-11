@@ -57,7 +57,7 @@ export default {
     }),
     media() {
       sectionName = this.$nuxt.$route.name.split('-')[1]
-      console.log('SECDTION NAME', sectionName)
+      // console.log('SECDTION NAME', sectionName)
       return this.$store.getters['galleries/media'](sectionName)
     },
     sectionName() {
