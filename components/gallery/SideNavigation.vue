@@ -23,7 +23,6 @@
             <NuxtLink :to="`/gallery/${section.slug}#${section.slug}-${gallery.slug}`" class="tracking-widest">
               - {{ gallery.title }}</NuxtLink
             >
-            >
           </li>
         </ul>
       </li>
