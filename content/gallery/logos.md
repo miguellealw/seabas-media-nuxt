@@ -15,4 +15,6 @@ images:
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/lawncare_black-page-001_aqu22f.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/Triple_A_z1stut.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/los_magueyitos_eydmve.png
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1626484672/gallery/Logos/Banner_vivwfk.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1626484669/gallery/Logos/seabass_vmcgup.jpg
 ---
