@@ -21,4 +21,8 @@ images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC01940_tle1sp.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC02255_zinfny.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC01839_bahpob.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1635899889/gallery/Portraits/DSC02496_p7rtil.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899906/gallery/Portraits/DSC02441_kortwy.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899918/gallery/Portraits/DSC02598_zdbe3k.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899920/gallery/Portraits/DSC02713-Edit_wtksml.jpg
 ---
