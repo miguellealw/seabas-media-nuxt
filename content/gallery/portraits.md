@@ -3,6 +3,13 @@ title: Portraits
 section: Photography
 position: 1
 images:
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC01940_tle1sp.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC02255_zinfny.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC01839_bahpob.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1635899889/gallery/Portraits/DSC02496_p7rtil.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899906/gallery/Portraits/DSC02441_kortwy.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899918/gallery/Portraits/DSC02598_zdbe3k.jpg
+    - https://res.cloudinary.com/seabas-media/image/upload/v1635899920/gallery/Portraits/DSC02713-Edit_wtksml.jpg
   - - https://res.cloudinary.com/seabas-media/image/upload/v1621224991/gallery/Portraits/IMG_7280_i33kgm.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621224991/gallery/Portraits/IMG_7281_rtezsq.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621227514/gallery/Portraits/Copy_of_IMG_6858_oys6md.jpg
@@ -18,11 +25,4 @@ images:
     - https://res.cloudinary.com/seabas-media/image/upload/v1621234776/gallery/Portraits/IMG_3440_zpn9cj.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621234776/gallery/Portraits/IMG_2673_qezwz7.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621234776/gallery/Portraits/IMG_3033_mf4i8x.jpg
-  - - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC01940_tle1sp.jpg
-    - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC02255_zinfny.jpg
-    - https://res.cloudinary.com/seabas-media/image/upload/v1635899694/gallery/Portraits/DSC01839_bahpob.jpg
-  - - https://res.cloudinary.com/seabas-media/image/upload/v1635899889/gallery/Portraits/DSC02496_p7rtil.jpg
-    - https://res.cloudinary.com/seabas-media/image/upload/v1635899906/gallery/Portraits/DSC02441_kortwy.jpg
-    - https://res.cloudinary.com/seabas-media/image/upload/v1635899918/gallery/Portraits/DSC02598_zdbe3k.jpg
-    - https://res.cloudinary.com/seabas-media/image/upload/v1635899920/gallery/Portraits/DSC02713-Edit_wtksml.jpg
 ---
