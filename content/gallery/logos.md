@@ -17,4 +17,6 @@ images:
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/los_magueyitos_eydmve.png
   - - https://res.cloudinary.com/seabas-media/image/upload/v1626484672/gallery/Logos/Banner_vivwfk.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1626484669/gallery/Logos/seabass_vmcgup.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1642326593/gallery/Logos/sole_over_soul_iaaapj.png
+    - https://res.cloudinary.com/seabas-media/image/upload/v1642326589/gallery/Logos/willow_lomcyn.png
 ---
