@@ -1,5 +1,5 @@
 ---
-title: Videos
+title: Music Videos
 section: Videos
 position: 2
 images:
