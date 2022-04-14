@@ -10,4 +10,9 @@ images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1649310489/gallery/Real-Estate/7C4A7994-7C57-4E55-8BFD-6949C15E3E4F_echkwo.jpg
   - - https://res.cloudinary.com/seabas-media/image/upload/v1649310489/gallery/Real-Estate/90014842-C012-40AF-A515-CD40F4AEA0F3_cslh9j.jpg
   - - https://res.cloudinary.com/seabas-media/image/upload/v1649310490/gallery/Real-Estate/C0505962-610D-4606-9704-6115EB968ADC_xw2oyl.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1649897950/gallery/Real-Estate/DSC04310-HDR_ac3skk.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1649897950/gallery/Real-Estate/DSC04290-HDR_d2bcdr.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1649897947/gallery/Real-Estate/DSC04160-Edit_cxwxiy.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1649897948/gallery/Real-Estate/DSC04200-Edit_srwlel.jpg
+  - - https://res.cloudinary.com/seabas-media/image/upload/v1649897949/gallery/Real-Estate/DSC04259-Edit_bvofca.jpg
 ---
