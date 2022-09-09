@@ -1,7 +1,7 @@
 ---
 title: Creative
 section: Photography
-position: 2
+position: 3
 images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1622354238/gallery/Creative/DSC00220_vbrpzb.jpg
   - - https://res.cloudinary.com/seabas-media/image/upload/v1621630581/gallery/Creative/IMG_6944_u95gds.jpg
