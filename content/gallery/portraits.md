@@ -1,7 +1,7 @@
 ---
 title: Portraits
 section: Photography
-position: 1
+position: 2
 images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1657725924/gallery/Portraits/DSC08668-Edit_egtwbd.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1657725924/gallery/Portraits/DSC08662-Edit_oojsky.jpg
