@@ -1,7 +1,7 @@
 ---
 title: Real Estate
 section: Photography
-position: 3
+position: 1
 images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1649310489/gallery/Real-Estate/19BAB3AD-5E1D-4563-B5F8-DF0FBBF65C84_bptjmf.jpg
   - - https://res.cloudinary.com/seabas-media/image/upload/v1649310489/gallery/Real-Estate/292B2624-922F-44CE-894F-325B2C48B39C_wuwolu.jpg
