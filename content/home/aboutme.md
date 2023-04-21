@@ -1,8 +1,9 @@
 ---
 aboutmetext: >-
   My name is Sebastian Leal, I'm a multimedia creator and I specialize in
-  filmmaking, photography, and graphic design and I'm based in the vibrant DFW.
-  I got my Bachelors in Cinematic Arts in the University of Texas at Arlington. 
+  filmmaking, photography, and graphic design and I'm based in the vibrant DFW,
+  Texas. I got my Bachelors in Cinematic Arts in the University of Texas at
+  Arlington. 
 
 
   I've always been drawn to the world of art and creativity, and my passion for storytelling and visual communication led me to pursue a career in the creative industries. Over the years, I've honed my skills and developed a diverse portfolio of work that spans across multiple mediums.
