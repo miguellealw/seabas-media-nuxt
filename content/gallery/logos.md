@@ -1,7 +1,7 @@
 ---
 title: Logos
 section: Graphic Design
-position: 1
+position: 2
 images:
   - - https://res.cloudinary.com/seabas-media/image/upload/v1621649269/gallery/Logos/Copy_of_spa-page-001_isglfn.jpg
     - https://res.cloudinary.com/seabas-media/image/upload/v1621649270/gallery/Logos/Untitled-4_v6ki6h.png
