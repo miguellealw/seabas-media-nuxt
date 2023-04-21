@@ -23,9 +23,9 @@
       </ul>
 
       <!-- NOTE: put router link outside button so it loads button on ipad -->
-      <router-link to="/gallery" class="my-work-button mt-5 self-center md:self-start">
+      <router-link to="/gallery" class="my-work-button mt-5 w-full">
         <button
-          class="uppercase px-10 py-3 text-xs block hover:bg-black hover:text-white"
+          class="uppercase px-10 py-3 text-xs block hover:bg-black hover:text-white w-full"
           style="border: 2px solid black"
         >
           All My Work

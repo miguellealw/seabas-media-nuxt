@@ -55,13 +55,31 @@
           <span class="font-black">Follow Me</span>
           <ul class="mt-2 text-xxs md:text-xs">
             <li>
-              <a href="https://www.instagram.com/seabasmedia/?hl=en" target="_blank">Instagram</a>
+              <a
+                href="https://www.instagram.com/seabasmedia/?hl=en"
+                class="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
             </li>
             <li class="my-2 md:my-auto">
-              <a href="https://www.tiktok.com/@sebastiangleal?lang=en" target="_blank">Tik Tok</a>
+              <a
+                href="https://www.tiktok.com/@sebastiangleal?lang=en"
+                class="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tik Tok</a
+              >
             </li>
             <li>
-              <a href="https://www.youtube.com/user/OW3NxX" target="_blank">YouTube</a>
+              <a
+                href="https://www.youtube.com/user/OW3NxX"
+                class="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
             </li>
           </ul>
         </div>
@@ -83,7 +101,7 @@ export default {
   components: { HomeSkillTree },
   data: () => {
     return {
-      skills: ['Photographer', 'Videographer', 'Graphic Designer'],
+      skills: ['Filmmaker', 'Photographer', 'Graphic Designer'],
       backupLandingImage:
         'https://res.cloudinary.com/miguelleal/image/upload/v1601685507/sebas-portfolio-vue/images/ferris-wheel.jpg',
       showSkill: true,

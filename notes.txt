@@ -1,0 +1,87 @@
+enabled asset optimization and prerending in site settings > build & deploy
+
+error: Missing unpublished entry id or collection and slug
+  - solved: changed {{ slug }} to {{slug}}
+
+
+gallery structure:
+GALL [
+  {
+    slug: 'logos',
+    title: 'Logos',
+    section: 'Graphic Design',
+    position: 1,
+    images: [ [Array] ],
+    toc: [],
+    body: { type: 'root', children: [] },
+    dir: '/gallery',
+    path: '/gallery/logos',
+    extension: '.md',
+    createdAt: '2021-05-22T02:09:29.413Z',
+    updatedAt: '2021-05-22T02:12:33.593Z'
+  },
+  {
+    slug: 'portraits',
+    title: 'Portraits',
+    section: 'Photography',
+    position: 1,
+    images: [ [Array], [Array] ],
+    toc: [],
+    body: { type: 'root', children: [] },
+    dir: '/gallery',
+    path: '/gallery/portraits',
+    extension: '.md',
+    createdAt: '2021-05-14T08:09:15.634Z',
+    updatedAt: '2021-05-22T00:01:46.109Z'
+  },
+  {
+    slug: 'student-projects',
+    title: 'Student Projects',
+    section: 'Video',
+    position: 1,
+    images: [ [Array] ],
+    toc: [],
+    body: { type: 'root', children: [] },
+    dir: '/gallery',
+    path: '/gallery/student-projects',
+    extension: '.md',
+    createdAt: '2021-05-22T01:48:06.360Z',
+    updatedAt: '2021-05-22T01:49:09.159Z'
+  },
+  {
+    slug: 'creative',
+    title: 'Creative',
+    section: 'Photography',
+    position: 2,
+    images: [ [Array] ],
+    toc: [],
+    body: { type: 'root', children: [] },
+    dir: '/gallery',
+    path: '/gallery/creative',
+    extension: '.md',
+    createdAt: '2021-05-17T07:35:28.626Z',
+    updatedAt: '2021-05-22T00:01:46.108Z'
+  }
+]
+
+
+
+### When using console.log sometimes it is logged in the browser console (client) and sometimes in the server console (server). It depends where you call console.log
+
+
+### AFTER ISSUES WITH NUXT MUTATIONS
+problem: when a mutation was called in asyncData app would break w/ no warnings or errors
+
+some solution: instead of calling this.$store.state.<module_name>.<muation> i got the store from the context passed into the asyncData function and used commit on that (store.commit("<mutaion_name>", mut_args))
+
+using mapMutations and calling this.<mut_name> does not seem to work...
+
+
+
+### 'this' is not accessible from certain vue places in the 'export default {}' in vue
+  - 'this' is accessible from computed properties 
+  - 'this' is not accessible from asyncData and methods, but can access certain things from the context passed into the function
+
+
+### Issue - if data has already been fetched do not fetch again
+  - NOT SOLUTION - cannot just fetch in gallery/index.vue b/c if a sub page like Photography is visited first then the data will not be fetched

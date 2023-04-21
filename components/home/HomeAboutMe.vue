@@ -16,8 +16,8 @@
 
       <!-- Profile Image -->
       <!-- <div class="w-full mx-auto bg-orange-300" style="height: 30rem"> -->
-      <div class="w-full mx-auto bg-orange-300">
-        <img :src="image" class="object-cover object-center w-full h-full" alt="" />
+      <div class="w-full mx-auto">
+        <img :src="image" class="object-cover object-center w-full" alt="" />
       </div>
     </div>
   </section>

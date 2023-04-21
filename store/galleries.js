@@ -13,13 +13,13 @@ export const state = () => ({
   // TODO: add a media section to sections
   sections: [
     {
-      name: 'Photography',
-      slug: 'photography',
+      name: 'Videos',
+      slug: 'videos',
       galleries: []
     },
     {
-      name: 'Videos',
-      slug: 'videos',
+      name: 'Photography',
+      slug: 'photography',
       galleries: []
     },
     {
@@ -115,14 +115,14 @@ export const mutations = {
   setSections(state) {
     let sections = [
       {
-        name: 'Photography',
-        slug: 'photography',
-        galleries: [...getSectionFromGalleries(state.all, PHOTOGRAPHY).sort((g1, g2) => g1.position - g2.position)]
-      },
-      {
         name: 'Videos',
         slug: 'videos',
         galleries: [...getSectionFromGalleries(state.all, VIDEO).sort((g1, g2) => g1.position - g2.position)]
+      },
+      {
+        name: 'Photography',
+        slug: 'photography',
+        galleries: [...getSectionFromGalleries(state.all, PHOTOGRAPHY).sort((g1, g2) => g1.position - g2.position)]
       },
       {
         name: 'Graphic Design',
