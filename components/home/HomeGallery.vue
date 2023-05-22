@@ -1,6 +1,7 @@
 <template>
-  <section id="my-work" class="second-fade-in w-full mx-auto min-h-screen md:h-screen relative flex items-center">
+  <section id="my-work" class="second-fade-in w-full mx-auto relative flex flex-col items-center">
     <div class="w-3/4 lg:w-1/2 flex items-center flex-col relative h-full mx-auto md:-top-10 inset-0">
+      <h3 class="font-bold uppercase tracking-widest md:text-white text-sm my-10 md:my-2 self-start">My Work</h3>
       <!-- Decorative Line -->
       <!-- <svg
           width="1"
@@ -11,8 +12,17 @@
           <path fill="#fff" d="M0 0h1v260H0z" />
         </svg> -->
 
-      <h3 class="font-bold uppercase tracking-widest md:text-white text-sm my-10 md:my-2 self-start">My Work</h3>
-      <ul class="h-full grid grid-cols-2 grid-rows-myWorkGallery md:grid-rows-2 gap-2 lg:gap-6">
+      <!-- YouTube Demo Reel Video -->
+      <iframe
+        class="w-full h-64 md:h-160"
+        src="https://www.youtube.com/embed/69_ZrdGdnxo"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+
+      <ul class="mt-6 grid grid-cols-2 grid-rows-myWorkGallery min-h-screen md:h-screen md:grid-rows-2 gap-2 lg:gap-6">
         <li v-for="(image, index) in gallery" :key="index" class="overflow-hidden">
           <img
             :src="image"
@@ -26,12 +36,14 @@
       <router-link to="/gallery" class="my-work-button mt-5 w-full">
         <button
           class="uppercase px-10 py-3 text-xs block hover:bg-black hover:text-white w-full"
-          style="border: 2px solid black"
+          style="border: 1px solid black"
         >
-          All My Work
+          View All My Work
         </button>
       </router-link>
     </div>
+
+    <instagram-feed />
   </section>
 
   <!-- <section
@@ -97,7 +109,10 @@
 </template>
 
 <script>
+import InstagramFeed from './InstagramFeed.vue'
+
 export default {
+  components: { InstagramFeed },
   props: {
     gallery: {
       type: Array,

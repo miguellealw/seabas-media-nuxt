@@ -6,6 +6,9 @@
     <!-- My Work - Gallery -->
     <home-gallery :gallery="homeGalleryImages" />
 
+    <!-- Instagram Feed -->
+    <!-- <instagram-feed /> -->
+
     <!-- About Me -->
     <home-about-me :text="aboutMeText" :image="aboutMeImage" />
 
@@ -22,11 +25,12 @@ import HomeGallery from '/components/home/HomeGallery.vue'
 import HomeContactMe from '/components/home/HomeContactMe.vue'
 import HomeAboutMe from '/components/home/HomeAboutMe.vue'
 import Footer from '/components/global/Footer'
+import InstagramFeed from '~/components/home/InstagramFeed.vue'
 let homeData, aboutMe, homeGallery
 
 export default {
   name: 'HomePage',
-  components: { HomeLanding, HomeGallery, HomeContactMe, HomeAboutMe, Footer },
+  components: { HomeLanding, HomeGallery, HomeContactMe, HomeAboutMe, Footer, InstagramFeed },
   async asyncData({ $content, params, error }) {
     try {
       homeData = await $content('home').fetch()
@@ -46,6 +50,8 @@ export default {
   },
 }
 </script>
+
+// For the instagram embed
 
 <style scoped>
 .smooth-scroll {

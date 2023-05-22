@@ -15,7 +15,13 @@
       </li>
 
       <!-- Video Iframe -->
-      <li v-else-if="workType === 'Videos'" v-for="(image, index) of images" :key="index" v-html="image"></li>
+      <li
+        v-else-if="workType === 'Videos'"
+        v-for="(image, index) of images"
+        :key="index"
+        v-html="image"
+        class="bg-gray-300"
+      ></li>
       <!-- <li v-else-if="workType === 'Videos'" v-for="(image, index) of images" :key="index" class="flex items-center">
         <video-player :videoSrc="image" />
       </li> -->

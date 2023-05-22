@@ -108,7 +108,15 @@ module.exports = {
         '40': '10rem',
         '48': '12rem',
         '56': '14rem',
-        '64': '16rem'
+        '64': '16rem',
+        // CUSTOM from 05/21/23
+        '72': '18rem',
+        '80': '20rem',
+        '96': '24rem',
+        '112': '28rem',
+        '128': '32rem',
+        '144': '36rem',
+        '160': '40rem'
       },
       backgroundColor: theme => theme('colors'),
       backgroundOpacity: theme => theme('opacity'),

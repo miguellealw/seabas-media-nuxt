@@ -3,7 +3,7 @@
     <!-- style="height: 25rem;" -->
     <!-- lg:ml-auto lg:mr-12 -->
     <div
-      class="w-3/4 lg:w-1/2 grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 auto-rows-min md:gap-10 mx-auto"
+      class="w-3/4 lg:w-1/2 grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 auto-rows-min gap-10 md:gap-10 mx-auto"
     >
       <!-- About Me content -->
       <div>
