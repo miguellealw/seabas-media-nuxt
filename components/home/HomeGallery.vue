@@ -22,7 +22,7 @@
         allowfullscreen
       ></iframe>
 
-      <ul class="mt-6 grid grid-cols-2 grid-rows-myWorkGallery min-h-screen md:h-screen md:grid-rows-2 gap-2 lg:gap-6">
+      <ul class="mt-6 grid grid-cols-2 grid-rows-myWorkGallery md:h-screen md:grid-rows-2 gap-2 lg:gap-6">
         <li v-for="(image, index) in gallery" :key="index" class="overflow-hidden">
           <img
             :src="image"
